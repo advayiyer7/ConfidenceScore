@@ -1,0 +1,9 @@
+title,inferred_raw_unit,inferred_raw_qty,uom_std_unit,uom_std_qty,confidence_band,tier_hit,provenance_note,duration_ms,api_error
+Sunflower Oil 5L,l,5,litre,,high,tier1,regex_unit_hit,12,
+Dettol Hand Wash 60 ml Refill,ml,60,litre,,high,tier1,regex_unit_hit,9,
+Maggi Masala Noodles 30 G x 30 sachet,g,30,kg,,medium,tier2,multiplicative_pattern,15,
+Samosa (half Done)-Snacc,,,piece,,low,tier3,no_measurement_found,31,
+Curry Leaves,,,kg,,low,tier3,no_measurement_found,28,
+Banana Robusta,piece,6,piece,,low,tier3,count_only,22,
+Idli Batter,,,litre,,low,tier3,no_measurement_found,25,
+Mystery Item XK-99,,,kg,,low,tier3,no_measurement_found,40,upstream timeout
