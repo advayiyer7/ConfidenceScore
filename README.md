@@ -33,7 +33,8 @@ pip install openai
 export OPENAI_API_KEY=sk-...   # PowerShell: $env:OPENAI_API_KEY = "sk-..."
 
 python uom_confidence.py --input pipeline_out.csv --output scored.csv \
-    [--model gpt-4o] [--threshold 0.70] [--k 2] [--workers 4] [--no-piece-to-kg]
+    [--model gpt-4o] [--threshold 0.70] [--k 2] [--workers 4] [--no-piece-to-kg] \
+    [--deterministic-only]   # no API calls: only explicit-measurement rows
 ```
 
 Output keeps all original columns and appends `computed_std_qty`,
@@ -41,3 +42,20 @@ Output keeps all original columns and appends `computed_std_qty`,
 `alternatives` (JSON), and `model_reasoning`.
 
 `sample_input.csv` / `sample_output.csv` show an example run.
+
+## Benchmark
+
+`benchmark.py` measures how well the `confidence` column predicts actual
+correctness, against the labeled gold set in `gold.csv` (`gold_std_qty` +
+`gold_tolerance_pct` per row; blank gold = non-estimable, correct behavior
+is to abstain). It reports accuracy, Brier score, ECE, a reliability table,
+AUROC, and a threshold sweep (auto-accept coverage vs. selective accuracy),
+writing the report to `RESULTS.md`.
+
+```bash
+python uom_confidence.py --input gold.csv --output gold_scored.csv
+python benchmark.py --scored gold_scored.csv --gold gold.csv --output RESULTS.md
+```
+
+Gold quantities for `piece` rows assume the default `--piece-to-kg` mode.
+See `RESULTS.md` for the latest run and `REPORT.md` for a summary write-up.

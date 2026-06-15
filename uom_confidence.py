@@ -129,8 +129,21 @@ _RE_QTY_UNIT_X_N = re.compile(
 # "30 x 100 g", "6 x 1L"
 _RE_N_X_QTY_UNIT = re.compile(
     rf"{_NUM}\s*[x×*]\s*{_NUM}\s*({_UNIT_ALTS})\b", re.IGNORECASE)
-# "5L", "60 ml", "1.5 kg"
-_RE_QTY_UNIT = re.compile(rf"{_NUM}\s*({_UNIT_ALTS})\b", re.IGNORECASE)
+# "750ml + 250ml Free", "1 kg + 500 g" (bundle/freebie combos: sum both)
+_RE_QTY_UNIT_PLUS = re.compile(
+    rf"{_NUM}\s*({_UNIT_ALTS})\b\.?\s*\+\s*{_NUM}\s*({_UNIT_ALTS})\b",
+    re.IGNORECASE)
+# "1/2 kg", "1/4 kg" (validated as a true fraction at the call site)
+_RE_FRAC_QTY_UNIT = re.compile(
+    rf"\b(\d+)\s*/\s*(\d+)\s*({_UNIT_ALTS})\b", re.IGNORECASE)
+# "1.2L/600ml", "400/800g": variant listings, not totals -> ambiguous
+_RE_SLASH_VARIANTS = re.compile(
+    rf"{_NUM}\s*(?:({_UNIT_ALTS})\b)?\s*/\s*{_NUM}\s*({_UNIT_ALTS})\b",
+    re.IGNORECASE)
+# "5L", "60 ml", "1.5 kg"; the lookbehind keeps this from grabbing the tail
+# of a range or fraction ("2-3 kg", "1/2 kg") or a decimal's fraction part
+_RE_QTY_UNIT = re.compile(rf"(?<!\d[-/.]){_NUM}\s*({_UNIT_ALTS})\b",
+                          re.IGNORECASE)
 # "pack of 12"
 _RE_PACK_OF = re.compile(rf"pack\s+of\s+{_NUM}", re.IGNORECASE)
 
@@ -169,10 +182,33 @@ def deterministic_qty(title, raw_unit, raw_qty, target_unit):
         if hit and hit[0] == target_unit:
             return float(m.group(1)) * float(m.group(2)) * hit[1]
 
+    m = _RE_QTY_UNIT_PLUS.search(title)
+    if m:
+        first, second = _norm_unit(m.group(2)), _norm_unit(m.group(4))
+        if (first and second
+                and first[0] == target_unit and second[0] == target_unit):
+            return (float(m.group(1)) * first[1]
+                    + float(m.group(3)) * second[1])
+
+    m = _RE_FRAC_QTY_UNIT.search(title)
+    if m:
+        num, den = float(m.group(1)), float(m.group(2))
+        hit = _norm_unit(m.group(3))
+        # true fractions only ("1/2 kg"), not variant listings ("400/800g")
+        if hit and hit[0] == target_unit and 0 < num < den <= 8:
+            return num / den * hit[1]
+
+    if _RE_SLASH_VARIANTS.search(title):
+        return None  # "1.2L/600ml" lists variants; never answer confidently
+
     for m in _RE_QTY_UNIT.finditer(title):
         hit = _norm_unit(m.group(2))
         if hit and hit[0] == target_unit:
-            return float(m.group(1)) * hit[1]
+            qty = float(m.group(1)) * hit[1]
+            pack = _RE_PACK_OF.search(title)
+            if pack and target_unit != "piece":  # "52g (Pack of 10)"
+                qty *= float(pack.group(1))
+            return qty
 
     if target_unit == "piece":
         m = _RE_PACK_OF.search(title)
@@ -187,14 +223,17 @@ def deterministic_qty(title, raw_unit, raw_qty, target_unit):
     return None
 
 
-def piece_count(raw_unit, raw_qty):
-    """Count of pieces from the inferred fields, defaulting to 1."""
+def piece_count(title, raw_unit, raw_qty):
+    """Count of pieces from the inferred fields or title, defaulting to 1."""
     qty = _to_float(raw_qty)
-    if qty is None or qty <= 0:
+    if qty is not None and qty > 0:
+        hit = _norm_unit(raw_unit)
+        if hit is None or hit[0] == "piece":  # blank/unknown unit: a count
+            return qty
         return 1.0
-    hit = _norm_unit(raw_unit)
-    if hit is None or hit[0] == "piece":  # blank/unknown unit: treat as count
-        return qty
+    m = _RE_PACK_OF.search(title or "")  # "Eggs - Pack of 6"
+    if m:
+        return float(m.group(1))
     return 1.0
 
 
@@ -397,6 +436,9 @@ def process_row(client, row, cfg):
     if not target_unit:
         return blank_result("none"), ""
 
+    if cfg.get("deterministic_only"):
+        return blank_result("none"), ""
+
     # 2. Two-stage logprob estimation.
     try:
         candidates = stage1_candidates(
@@ -418,7 +460,8 @@ def process_row(client, row, cfg):
 
         qty = chosen["std_qty"]
         if piece_as_kg:
-            qty *= piece_count(row.get("inferred_raw_unit"),
+            qty *= piece_count(row.get("title"),
+                               row.get("inferred_raw_unit"),
                                row.get("inferred_raw_qty"))
 
         result = blank_result("logprob")
@@ -461,14 +504,21 @@ def main():
                         help="estimate per-piece weight in kg for piece items "
                              "(--no-piece-to-kg keeps 'piece' and estimates "
                              "count)")
+    parser.add_argument("--deterministic-only", action="store_true",
+                        help="no API calls: score only rows with explicit "
+                             "measurements, mark the rest source='none'")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s %(levelname)s %(message)s")
 
-    if not os.environ.get("OPENAI_API_KEY"):
-        sys.exit("OPENAI_API_KEY environment variable is not set")
-    client = OpenAI()
+    if args.deterministic_only:
+        client = None
+    else:
+        if not os.environ.get("OPENAI_API_KEY"):
+            sys.exit("OPENAI_API_KEY environment variable is not set "
+                     "(or pass --deterministic-only)")
+        client = OpenAI()
 
     output_path = args.output or re.sub(
         r"\.csv$", "", args.input, flags=re.IGNORECASE) + "_confidence.csv"
@@ -478,6 +528,7 @@ def main():
         "threshold": args.threshold,
         "k": args.k,
         "piece_to_kg": args.piece_to_kg,
+        "deterministic_only": args.deterministic_only,
     }
 
     with open(args.input, newline="", encoding="utf-8-sig") as fh:
