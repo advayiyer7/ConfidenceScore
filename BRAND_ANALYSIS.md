@@ -1,96 +1,133 @@
-# Confidence by Branded vs. Unbranded
+# Branded vs. Unbranded — Logprob Confidence
 
-- **Generated:** 2026-06-15
-- **Scored file:** `newtest_scored.csv`
+- **Generated:** 2026-06-16
+- **Scored file:** `brand_eval_scored.csv`
 
-Breaks the logprob-derived `confidence` score down by whether the product carries a brand. No gold labels here — this measures the confidence distribution and coverage, not calibration. The split separates two effects: explicit pack sizes in the title (parsed deterministically at 1.0) versus how confidently the model can *size* an item that states no quantity (the LLM path). Read the estimate-only table for the fair comparison of the latter.
+Each product is classified branded/unbranded by the model in a single forced token (B/U) with logprobs on. The **confidence is the token probability mass on the chosen letter** — a real logprob, not a self-reported number. No quantity is involved.
 
-## Confidence score
+## Headline
 
-| group | logprob confidence | all-rows confidence |
+- **Accuracy** (vs. gold labels): **98.9%** (89/90)
+- **Mean confidence:** 0.9992
+- **Mean confidence when correct:** 0.9993
+- **Mean confidence when wrong:** 0.9986
+- **Separation (right − wrong):** +0.0007 — positive means the logprob confidence actually tracks correctness.
+
+## Confidence by true class
+
+| true class | n | mean confidence | accuracy |
+|---|---|---|---|
+| branded | 41 | 0.9988 | 97.6% |
+| unbranded | 49 | 0.9996 | 100.0% |
+
+## Confidence bands
+
+High ≥ 0.85 · Medium 0.70–0.85 · Low < 0.70.
+
+| band | n | accuracy in band |
 |---|---|---|
-| branded | 0.7468 | 0.8958 |
-| unbranded | 0.9391 | 0.9409 |
+| high | 90 | 0.989 |
+| medium | 0 | — |
+| low | 0 | — |
 
-## Coverage and source split
+## Misclassifications
 
-| group | rows | scored | abstained | deterministic | LLM (logprob) |
-|---|---|---|---|---|---|
-| branded | 17 | 17 | 0 | 10 | 7 |
-| unbranded | 33 | 33 | 0 | 1 | 32 |
-
-## Confidence distribution (scored rows only)
-
-| group | n | mean | median | min | share below 0.70 |
-|---|---|---|---|---|---|
-| branded | 17 | 0.8958 | 1.0000 | 0.5101 | 12% |
-| unbranded | 33 | 0.9409 | 0.9842 | 0.5702 | 6% |
-
-**Separation (branded − unbranded mean confidence): -0.0452** — branded items score LOWER.
-
-## Estimate-only (LLM path), excluding deterministic 1.0s
-
-The deterministic rows score 1.0 purely because the title states an explicit measurement, which would swamp the comparison. Restricting to LLM-estimated rows isolates how confidently the model *sizes* an item with no stated quantity.
-
-| group | n | mean | median | min | share below 0.70 |
-|---|---|---|---|---|---|
-| branded | 7 | 0.7468 | 0.7481 | 0.5101 | 29% |
-| unbranded | 32 | 0.9391 | 0.9841 | 0.5702 | 6% |
-
-**Separation (branded − unbranded mean confidence): -0.1922** — branded items score LOWER.
+| title | true | predicted | confidence |
+|---|---|---|---|
+| Pizza Box 12*12 (TS) | branded | unbranded | 0.9986 |
 
 ## Per-row detail
 
-| title | brand | source | confidence |
-|---|---|---|---|
-| #_# Mango Duet (60 ml) - Go Zero | branded | deterministic | 1.0000 |
-| GK - Infinite Food - Lemon Ice Tea Powder (30 G x 30 sachet) | branded | deterministic | 1.0000 |
-| Alpha 6 -Toilet Bowl Cleaner 5L Can | branded | deterministic | 1.0000 |
-| #_# Raspberry Cream Cake [500 gms] - Sassy Teaspoon | branded | deterministic | 1.0000 |
-| #_# Kesar Pista Kulfi 300gm - Parsi Dairy Farm | branded | deterministic | 1.0000 |
-| #_# Frozen The Snicky Chonker (150g - Cookie) - Chonkers | branded | deterministic | 1.0000 |
-| Priya - Mustard Oil 1 L | branded | deterministic | 1.0000 |
-| Gig Great Indian Gin 750Ml | branded | deterministic | 1.0000 |
-| #_# Sugar Free Pancake Syrup [355Ml] - Noto | branded | deterministic | 1.0000 |
-| #_# Sugar Free Red Ruby Thai Ice Cream Tub (125 ml) - Bina | branded | deterministic | 1.0000 |
-| #_# Strawberry Raspberry Ice Pop - Getaway | branded | logprob | 0.9089 |
-| Paneer Tikka filling-Snacc | branded | logprob | 0.8559 |
-| Samosa (half Done)-Snacc | branded | logprob | 0.7969 |
-| Pizza Box 12*12 (TS) | branded | logprob | 0.7481 |
-| #_# Salted Caramel Brownie - Sassy Teaspoon | branded | logprob | 0.7416 |
-| Ajinomoto (Golden Crown) | branded | logprob | 0.6664 |
-| Chilli Cheese mixer-Snacc | branded | logprob | 0.5101 |
-| Bok Choy incremental 0.5 10333 | unbranded | logprob | 1.0000 |
-| Paneer tikka Cubes (200 GM) | unbranded | deterministic | 1.0000 |
-| Curry Leaves | unbranded | logprob | 0.9982 |
-| Spring Onion | unbranded | logprob | 0.9978 |
-| ONION LARGE | unbranded | logprob | 0.9976 |
-| Olive Oil | unbranded | logprob | 0.9971 |
-| Spring Onion | unbranded | logprob | 0.9964 |
-| Mutton Boneless | unbranded | logprob | 0.9955 |
-| Cauliflower | unbranded | logprob | 0.9944 |
-| Cucumbar | unbranded | logprob | 0.9943 |
-| Potato Bun | unbranded | logprob | 0.9887 |
-| Bada Pyaz ( Big Onion) | unbranded | logprob | 0.9879 |
-| Button Mushroom | unbranded | logprob | 0.9873 |
-| RAJMA | unbranded | logprob | 0.9868 |
-| Green Chilli | unbranded | logprob | 0.9867 |
-| Mint Leaves | unbranded | logprob | 0.9864 |
-| MILK TONNED | unbranded | logprob | 0.9842 |
-| Onion Big | unbranded | logprob | 0.9840 |
-| MILK FULL CREAM | unbranded | logprob | 0.9836 |
-| Eggplant (Brinjal) | unbranded | logprob | 0.9810 |
-| CARROT | unbranded | logprob | 0.9792 |
-| American Corn | unbranded | logprob | 0.9782 |
-| TOMATO | unbranded | logprob | 0.9767 |
-| Carrot | unbranded | logprob | 0.9690 |
-| EGGS TRAY | unbranded | logprob | 0.9632 |
-| Coriander Leaves (Dhaniya) | unbranded | logprob | 0.9485 |
-| Rajma (Kidney beans) Pkt | unbranded | logprob | 0.9464 |
-| Paneer | unbranded | logprob | 0.9199 |
-| EGGS TRAY | unbranded | logprob | 0.8623 |
-| ONION LARGE | unbranded | logprob | 0.7735 |
-| Lettuce Green Curly/Leafy | unbranded | logprob | 0.7565 |
-| Green Zucchini | unbranded | logprob | 0.5793 |
-| Broccoli | unbranded | logprob | 0.5702 |
+| title | true | pred | P(branded) | confidence |
+|---|---|---|---|---|
+| #_# Mango Duet (60 ml) - Go Zero | branded | branded | 1.0000 | 1.0000 |
+| GK - Infinite Food - Lemon Ice Tea Powder (30 G x 30 sachet) | branded | branded | 1.0000 | 1.0000 |
+| Alpha 6 -Toilet Bowl Cleaner 5L Can | branded | branded | 1.0000 | 1.0000 |
+| Ajinomoto (Golden Crown) | branded | branded | 1.0000 | 1.0000 |
+| #_# Raspberry Cream Cake [500 gms] - Sassy Teaspoon | branded | branded | 1.0000 | 1.0000 |
+| #_# Salted Caramel Brownie - Sassy Teaspoon | branded | branded | 1.0000 | 1.0000 |
+| #_# Kesar Pista Kulfi 300gm - Parsi Dairy Farm | branded | branded | 1.0000 | 1.0000 |
+| #_# Frozen The Snicky Chonker (150g - Cookie) - Chonkers | branded | branded | 1.0000 | 1.0000 |
+| Priya - Mustard Oil 1 L | branded | branded | 1.0000 | 1.0000 |
+| Gig Great Indian Gin 750Ml | branded | branded | 1.0000 | 1.0000 |
+| #_# Sugar Free Pancake Syrup [355Ml] - Noto | branded | branded | 1.0000 | 1.0000 |
+| Haldiram Aloo Bhujia | branded | branded | 1.0000 | 1.0000 |
+| McCain Smiles | branded | branded | 1.0000 | 1.0000 |
+| Amul Cheese Slice | branded | branded | 1.0000 | 1.0000 |
+| Britannia Bourbon Biscuit | branded | branded | 1.0000 | 1.0000 |
+| Maggi Masala Noodles | branded | branded | 1.0000 | 1.0000 |
+| Bikaji Soan Papdi | branded | branded | 1.0000 | 1.0000 |
+| MTR Rava Idli Mix | branded | branded | 1.0000 | 1.0000 |
+| Mother Dairy Lassi | branded | branded | 1.0000 | 1.0000 |
+| Epigamia Greek Yogurt | branded | branded | 1.0000 | 1.0000 |
+| Wow Momo Veg Momo | branded | branded | 1.0000 | 1.0000 |
+| Theobroma Walnut Brownie | branded | branded | 1.0000 | 1.0000 |
+| Keventers Cold Coffee | branded | branded | 1.0000 | 1.0000 |
+| Go Cheese Cubes | branded | branded | 1.0000 | 1.0000 |
+| Cornitos Nacho Crisps | branded | branded | 1.0000 | 1.0000 |
+| Unibic Choco Chip Cookies | branded | branded | 1.0000 | 1.0000 |
+| Nestle Munch Chocolate | branded | branded | 1.0000 | 1.0000 |
+| Lay's Magic Masala | branded | branded | 1.0000 | 1.0000 |
+| Haldiram Rasgulla | branded | branded | 1.0000 | 1.0000 |
+| Amul Gold Milk 500ml | branded | branded | 1.0000 | 1.0000 |
+| Tata Sampann Toor Dal 1kg | branded | branded | 1.0000 | 1.0000 |
+| Surf Excel Liquid 1L | branded | branded | 1.0000 | 1.0000 |
+| Kissan Mixed Fruit Jam 200g | branded | branded | 1.0000 | 1.0000 |
+| Red Bull Energy 250ml | branded | branded | 1.0000 | 1.0000 |
+| Colgate MaxFresh 100g | branded | branded | 1.0000 | 1.0000 |
+| Chilli Cheese mixer-Snacc | branded | branded | 0.9999 | 0.9999 |
+| Paneer Tikka filling-Snacc | branded | branded | 0.9998 | 0.9998 |
+| #_# Sugar Free Red Ruby Thai Ice Cream Tub (125 ml) - Bina | branded | branded | 0.9998 | 0.9998 |
+| Samosa (half Done)-Snacc | branded | branded | 0.9800 | 0.9800 |
+| #_# Strawberry Raspberry Ice Pop - Getaway | branded | branded | 0.9724 | 0.9724 |
+| Pizza Box 12*12 (TS) ⚠ | branded | unbranded | 0.0014 | 0.9986 |
+| Potato Bun | unbranded | unbranded | 0.0177 | 0.9823 |
+| Paneer tikka Cubes (200 GM) | unbranded | unbranded | 0.0004 | 0.9996 |
+| Rajma (Kidney beans) Pkt | unbranded | unbranded | 0.0001 | 0.9999 |
+| Olive Oil | unbranded | unbranded | 0.0001 | 0.9999 |
+| Curry Leaves | unbranded | unbranded | 0.0000 | 1.0000 |
+| Spring Onion | unbranded | unbranded | 0.0000 | 1.0000 |
+| American Corn | unbranded | unbranded | 0.0000 | 1.0000 |
+| Paneer | unbranded | unbranded | 0.0000 | 1.0000 |
+| Mutton Boneless | unbranded | unbranded | 0.0000 | 1.0000 |
+| Green Zucchini | unbranded | unbranded | 0.0000 | 1.0000 |
+| MILK TONNED | unbranded | unbranded | 0.0000 | 1.0000 |
+| MILK FULL CREAM | unbranded | unbranded | 0.0000 | 1.0000 |
+| Green Chilli | unbranded | unbranded | 0.0000 | 1.0000 |
+| Cucumbar | unbranded | unbranded | 0.0000 | 1.0000 |
+| Coriander Leaves (Dhaniya) | unbranded | unbranded | 0.0000 | 1.0000 |
+| CARROT | unbranded | unbranded | 0.0000 | 1.0000 |
+| ONION LARGE | unbranded | unbranded | 0.0000 | 1.0000 |
+| Bok Choy incremental 0.5 10333 | unbranded | unbranded | 0.0000 | 1.0000 |
+| Button Mushroom | unbranded | unbranded | 0.0000 | 1.0000 |
+| Bada Pyaz ( Big Onion) | unbranded | unbranded | 0.0000 | 1.0000 |
+| Eggplant (Brinjal) | unbranded | unbranded | 0.0000 | 1.0000 |
+| RAJMA | unbranded | unbranded | 0.0000 | 1.0000 |
+| Spring Onion | unbranded | unbranded | 0.0000 | 1.0000 |
+| Cauliflower | unbranded | unbranded | 0.0000 | 1.0000 |
+| EGGS TRAY | unbranded | unbranded | 0.0000 | 1.0000 |
+| TOMATO | unbranded | unbranded | 0.0000 | 1.0000 |
+| EGGS TRAY | unbranded | unbranded | 0.0000 | 1.0000 |
+| Lettuce Green Curly/Leafy | unbranded | unbranded | 0.0000 | 1.0000 |
+| Mint Leaves | unbranded | unbranded | 0.0000 | 1.0000 |
+| ONION LARGE | unbranded | unbranded | 0.0000 | 1.0000 |
+| Onion Big | unbranded | unbranded | 0.0000 | 1.0000 |
+| Broccoli | unbranded | unbranded | 0.0000 | 1.0000 |
+| Carrot | unbranded | unbranded | 0.0000 | 1.0000 |
+| Lady Finger | unbranded | unbranded | 0.0000 | 1.0000 |
+| Bottle Gourd | unbranded | unbranded | 0.0000 | 1.0000 |
+| Capsicum Green | unbranded | unbranded | 0.0000 | 1.0000 |
+| Beetroot | unbranded | unbranded | 0.0000 | 1.0000 |
+| Sweet Potato | unbranded | unbranded | 0.0000 | 1.0000 |
+| Pomegranate | unbranded | unbranded | 0.0000 | 1.0000 |
+| Guava | unbranded | unbranded | 0.0000 | 1.0000 |
+| Drumstick | unbranded | unbranded | 0.0000 | 1.0000 |
+| Raw Banana | unbranded | unbranded | 0.0000 | 1.0000 |
+| Ridge Gourd | unbranded | unbranded | 0.0000 | 1.0000 |
+| Methi Leaves | unbranded | unbranded | 0.0000 | 1.0000 |
+| Red Cabbage | unbranded | unbranded | 0.0000 | 1.0000 |
+| Spinach Fresh | unbranded | unbranded | 0.0000 | 1.0000 |
+| White Radish | unbranded | unbranded | 0.0000 | 1.0000 |
+| Turnip | unbranded | unbranded | 0.0000 | 1.0000 |
+| Green Peas | unbranded | unbranded | 0.0000 | 1.0000 |
 
