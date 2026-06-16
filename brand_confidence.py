@@ -1,16 +1,16 @@
 """brand_confidence.py — logprob confidence for branded vs. unbranded.
 
 For each product title the model answers a single forced token — "B" (branded)
-or "U" (unbranded) — with logprobs enabled. The confidence is the token
-probability mass on the chosen letter, normalized over {B, U}:
+or "U" (unbranded) — with logprobs enabled. Confidence follows the OpenAI
+cookbook classification recipe: the linear probability of the chosen token,
 
-    P(branded)  = exp(lp_B) / (exp(lp_B) + exp(lp_U))
-    prediction  = B if P(branded) >= 0.5 else U
-    confidence  = max(P(branded), 1 - P(branded))
+    confidence = exp(logprob_of_chosen_token)
 
-This is a real token logprob — the model's own probability for the class — not
-a self-reported number. No quantity, no estimation: the only question is
-branded vs. unbranded.
+which is already a true probability (softmax over the full vocabulary), so no
+renormalization is needed. `p_branded` (renormalized over just B/U) is reported
+alongside for reference. This is a real token logprob — the model's own
+probability for the class — not a self-reported number. No quantity, no
+estimation: the only question is branded vs. unbranded.
 
 Input CSV needs a `title` column (and optionally a `brand` gold label, carried
 through for scoring). Output adds: pred_brand, confidence, p_branded.
@@ -61,7 +61,14 @@ def call_with_retry(fn, max_retries=5):
 
 
 def classify(client, model, title):
-    """Return P(branded) in [0,1] from the B/U token logprobs."""
+    """Classify branded/unbranded with logprobs.
+
+    Confidence follows the OpenAI cookbook classification recipe exactly: the
+    linear probability of the actually-chosen output token, `exp(logprob)`.
+    That value is already a true probability (softmax over the whole
+    vocabulary), so no renormalization is needed. `p_branded` (renormalized
+    over just B/U) is reported alongside for reference.
+    """
     prompt = (f"Product title: {title!r}\n\n"
               "Is this product branded or unbranded? "
               "Answer with a single letter: B for branded, U for unbranded.")
@@ -74,18 +81,28 @@ def classify(client, model, title):
     content = resp.choices[0].logprobs.content
     if not content:
         raise ValueError("no logprobs at answer position")
+    chosen = content[0]
+    token = chosen.token.strip().upper()
+
+    # Cookbook confidence: linear probability of the chosen token.
+    confidence = math.exp(chosen.logprob)
+
+    # Prediction from the chosen token; fall back to renormalized B/U mass.
     p_b = p_u = 0.0
-    for entry in content[0].top_logprobs:
-        tok = entry.token.strip().upper()
-        if tok.startswith("B"):
+    for entry in chosen.top_logprobs:
+        t = entry.token.strip().upper()
+        if t.startswith("B"):
             p_b += math.exp(entry.logprob)
-        elif tok.startswith("U"):
+        elif t.startswith("U"):
             p_u += math.exp(entry.logprob)
-    if p_b <= 0.0:
-        p_b = EPSILON
-    if p_u <= 0.0:
-        p_u = EPSILON
-    return p_b / (p_b + p_u)
+    p_branded = (p_b + EPSILON) / (p_b + p_u + 2 * EPSILON)
+    if token.startswith("B"):
+        pred = "branded"
+    elif token.startswith("U"):
+        pred = "unbranded"
+    else:
+        pred = "branded" if p_branded >= 0.5 else "unbranded"
+    return pred, confidence, p_branded, chosen.token
 
 
 def process_row(client, row, model):
@@ -93,9 +110,7 @@ def process_row(client, row, model):
     if not title:
         return {"pred_brand": "", "confidence": "", "p_branded": ""}, ""
     try:
-        p_branded = classify(client, model, title)
-        pred = "branded" if p_branded >= 0.5 else "unbranded"
-        confidence = max(p_branded, 1.0 - p_branded)
+        pred, confidence, p_branded, _ = classify(client, model, title)
         return {"pred_brand": pred,
                 "confidence": round(confidence, 4),
                 "p_branded": round(p_branded, 4)}, ""

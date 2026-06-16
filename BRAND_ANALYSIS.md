@@ -7,18 +7,18 @@ Each product is classified branded/unbranded by the model in a single forced tok
 
 ## Headline
 
-- **Accuracy** (vs. gold labels): **98.9%** (89/90)
-- **Mean confidence:** 0.9992
-- **Mean confidence when correct:** 0.9993
-- **Mean confidence when wrong:** 0.9986
-- **Separation (right − wrong):** +0.0007 — positive means the logprob confidence actually tracks correctness.
+- **Accuracy** (vs. gold labels): **97.3%** (107/110)
+- **Mean confidence:** 0.9937
+- **Mean confidence when correct:** 0.9938
+- **Mean confidence when wrong:** 0.9901
+- **Separation (right − wrong):** +0.0038 — positive means the logprob confidence actually tracks correctness.
 
 ## Confidence by true class
 
 | true class | n | mean confidence | accuracy |
 |---|---|---|---|
-| branded | 41 | 0.9988 | 97.6% |
-| unbranded | 49 | 0.9996 | 100.0% |
+| branded | 54 | 0.9878 | 94.4% |
+| unbranded | 56 | 0.9994 | 100.0% |
 
 ## Confidence bands
 
@@ -26,20 +26,23 @@ High ≥ 0.85 · Medium 0.70–0.85 · Low < 0.70.
 
 | band | n | accuracy in band |
 |---|---|---|
-| high | 90 | 0.989 |
-| medium | 0 | — |
-| low | 0 | — |
+| high | 108 | 0.972 |
+| medium | 1 | 1.000 |
+| low | 1 | 1.000 |
 
 ## Misclassifications
 
 | title | true | predicted | confidence |
 |---|---|---|---|
-| Pizza Box 12*12 (TS) | branded | unbranded | 0.9986 |
+| Value Fresh Onions 1kg | branded | unbranded | 1.0000 |
+| Pizza Box 12*12 (TS) | branded | unbranded | 0.9950 |
+| Select Cashews 250g | branded | unbranded | 0.9752 |
 
 ## Per-row detail
 
 | title | true | pred | P(branded) | confidence |
 |---|---|---|---|---|
+| Samosa (half Done)-Snacc | branded | branded | 1.0000 | 1.0000 |
 | #_# Mango Duet (60 ml) - Go Zero | branded | branded | 1.0000 | 1.0000 |
 | GK - Infinite Food - Lemon Ice Tea Powder (30 G x 30 sachet) | branded | branded | 1.0000 | 1.0000 |
 | Alpha 6 -Toilet Bowl Cleaner 5L Can | branded | branded | 1.0000 | 1.0000 |
@@ -75,16 +78,32 @@ High ≥ 0.85 · Medium 0.70–0.85 · Low < 0.70.
 | Kissan Mixed Fruit Jam 200g | branded | branded | 1.0000 | 1.0000 |
 | Red Bull Energy 250ml | branded | branded | 1.0000 | 1.0000 |
 | Colgate MaxFresh 100g | branded | branded | 1.0000 | 1.0000 |
+| Nature's Basket Premium Almonds | branded | branded | 1.0000 | 1.0000 |
+| Golden Harvest Basmati Rice | branded | branded | 1.0000 | 1.0000 |
+| Real Mixed Fruit Juice | branded | branded | 1.0000 | 1.0000 |
+| Healthy Bites Granola | branded | branded | 1.0000 | 1.0000 |
+| GK Special Tea | branded | branded | 1.0000 | 1.0000 |
 | Chilli Cheese mixer-Snacc | branded | branded | 0.9999 | 0.9999 |
+| #_# Sugar Free Red Ruby Thai Ice Cream Tub (125 ml) - Bina | branded | branded | 0.9999 | 0.9999 |
+| Fresh Farms Toned Milk | branded | branded | 0.9999 | 0.9999 |
+| Daily Good Whole Wheat Atta | branded | branded | 0.9999 | 0.9999 |
+| Smart Choice White Sugar | branded | branded | 0.9999 | 0.9999 |
 | Paneer Tikka filling-Snacc | branded | branded | 0.9998 | 0.9998 |
-| #_# Sugar Free Red Ruby Thai Ice Cream Tub (125 ml) - Bina | branded | branded | 0.9998 | 0.9998 |
-| Samosa (half Done)-Snacc | branded | branded | 0.9800 | 0.9800 |
-| #_# Strawberry Raspberry Ice Pop - Getaway | branded | branded | 0.9724 | 0.9724 |
-| Pizza Box 12*12 (TS) ⚠ | branded | unbranded | 0.0014 | 0.9986 |
-| Potato Bun | unbranded | unbranded | 0.0177 | 0.9823 |
+| TS Veg Patty | branded | branded | 0.9800 | 0.9800 |
+| #_# Strawberry Raspberry Ice Pop - Getaway | branded | branded | 0.9732 | 0.9732 |
+| Best Value Iodized Salt | branded | branded | 0.7186 | 0.7186 |
+| Kitchen Fresh Paneer | branded | branded | 0.6993 | 0.6993 |
+| Select Cashews 250g ⚠ | branded | unbranded | 0.0248 | 0.9752 |
+| Pizza Box 12*12 (TS) ⚠ | branded | unbranded | 0.0050 | 0.9950 |
+| Value Fresh Onions 1kg ⚠ | branded | unbranded | 0.0000 | 1.0000 |
+| Potato Bun | unbranded | unbranded | 0.0188 | 0.9812 |
+| Olive Oil | unbranded | unbranded | 0.0071 | 0.9929 |
+| Extra Virgin Olive Oil | unbranded | unbranded | 0.0026 | 0.9974 |
+| Pure Forest Honey | unbranded | unbranded | 0.0013 | 0.9987 |
+| Tasty Snack Mixture | unbranded | unbranded | 0.0006 | 0.9994 |
 | Paneer tikka Cubes (200 GM) | unbranded | unbranded | 0.0004 | 0.9996 |
 | Rajma (Kidney beans) Pkt | unbranded | unbranded | 0.0001 | 0.9999 |
-| Olive Oil | unbranded | unbranded | 0.0001 | 0.9999 |
+| Farm Eggs Brown | unbranded | unbranded | 0.0001 | 0.9999 |
 | Curry Leaves | unbranded | unbranded | 0.0000 | 1.0000 |
 | Spring Onion | unbranded | unbranded | 0.0000 | 1.0000 |
 | American Corn | unbranded | unbranded | 0.0000 | 1.0000 |
@@ -130,4 +149,7 @@ High ≥ 0.85 · Medium 0.70–0.85 · Low < 0.70.
 | White Radish | unbranded | unbranded | 0.0000 | 1.0000 |
 | Turnip | unbranded | unbranded | 0.0000 | 1.0000 |
 | Green Peas | unbranded | unbranded | 0.0000 | 1.0000 |
+| Premium Quality Walnuts | unbranded | unbranded | 0.0000 | 1.0000 |
+| Local Tomatoes Fresh | unbranded | unbranded | 0.0000 | 1.0000 |
+| Organic Turmeric Powder | unbranded | unbranded | 0.0000 | 1.0000 |
 
