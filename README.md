@@ -1,30 +1,26 @@
 # ConfidenceScore
 
-Logprob-based confidence scoring for unit-of-measure (UoM) standardization of
-grocery/food product rows, using the OpenAI API.
+Logprob-based confidence for classifying grocery/food product titles as
+**branded** vs. **unbranded**, using the OpenAI API.
 
-Given the output CSV of a 3-tier UoM pipeline (target unit already chosen in
-`uom_std_unit`), the script fills in the standardized quantity and attaches a
-confidence in [0,1] derived from **token logprobs** — not a self-reported
-number — plus top-K alternative interpretations when confidence is low.
+The confidence is derived from the model's **token logprobs** — not a
+self-reported "I'm 90% sure" number, which LLMs are known to inflate.
 
 ## How it works
 
-1. **Deterministic fast path** (no API call): explicit measurements in the
-   title/inferred fields (`5L`, `60 ml`, `30 G x 30 sachet` → 0.9 kg) are
-   parsed directly → confidence 1.0.
-2. **Two-stage logprob estimation** for everything else:
-   - **Stage 1 (estimate):** the model returns 2–4 candidate interpretations
-     `{std_unit, std_qty, reasoning}` as JSON. For "piece" items it estimates
-     the typical weight of one piece in kg (e.g. one samosa ≈ 0.05 kg).
-   - **Stage 2 (select, 1 token):** candidates are labelled A/B/C/… and the
-     model answers with a single letter, called with `logprobs=True`. The
-     top-logprob mass on the candidate letters is exponentiated, renormalized,
-     and the chosen letter's probability becomes the confidence. Below the
-     threshold, the top-K candidates ship as `alternatives`.
+For each product title the model answers a single forced token — `B` (branded)
+or `U` (unbranded) — with `logprobs=True`. The probability mass on the chosen
+letter, renormalized over `{B, U}`, is the confidence:
 
-Confidence is currently **raw, uncalibrated** logprob mass — see the
-`calibrate()` stub for where isotonic/Platt scaling will plug in.
+```
+P(branded)  = exp(lp_B) / (exp(lp_B) + exp(lp_U))
+prediction  = branded if P(branded) >= 0.5 else unbranded
+confidence  = max(P(branded), 1 - P(branded))
+```
+
+A *branded* product is sold under a specific company/brand name (Amul, Maggi,
+Haldiram); an *unbranded* one is generic, loose, or a commodity (Onion, Curry
+Leaves, Tomato). No quantity or unit estimation is involved.
 
 ## Usage
 
@@ -32,30 +28,45 @@ Confidence is currently **raw, uncalibrated** logprob mass — see the
 pip install openai
 export OPENAI_API_KEY=sk-...   # PowerShell: $env:OPENAI_API_KEY = "sk-..."
 
-python uom_confidence.py --input pipeline_out.csv --output scored.csv \
-    [--model gpt-4o] [--threshold 0.70] [--k 2] [--workers 4] [--no-piece-to-kg] \
-    [--deterministic-only]   # no API calls: only explicit-measurement rows
+python brand_confidence.py --input brand_eval.csv --output brand_eval_scored.csv \
+    [--model gpt-4o] [--workers 3]
 ```
 
-Output keeps all original columns and appends `computed_std_qty`,
-`confidence`, `confidence_source` (`deterministic` | `logprob` | `none`),
-`alternatives` (JSON), and `model_reasoning`.
+Input needs a `title` column (and optionally a `brand` gold label, carried
+through for scoring). Output appends `pred_brand`, `confidence`, and
+`p_branded`.
 
-`sample_input.csv` / `sample_output.csv` show an example run.
+## Analysis
 
-## Benchmark
-
-`benchmark.py` measures how well the `confidence` column predicts actual
-correctness, against the labeled gold set in `gold.csv` (`gold_std_qty` +
-`gold_tolerance_pct` per row; blank gold = non-estimable, correct behavior
-is to abstain). It reports accuracy, Brier score, ECE, a reliability table,
-AUROC, and a threshold sweep (auto-accept coverage vs. selective accuracy),
-writing the report to `RESULTS.md`.
+`brand_analysis.py` reads the scored file and reports how good the logprob
+confidence is: overall accuracy vs. gold, mean confidence per true class,
+confidence bands, **confidence-when-right vs. confidence-when-wrong** (does the
+logprob actually track correctness?), and a list of misclassifications.
 
 ```bash
-python uom_confidence.py --input gold.csv --output gold_scored.csv
-python benchmark.py --scored gold_scored.csv --gold gold.csv --output RESULTS.md
+python brand_analysis.py --scored brand_eval_scored.csv --output BRAND_ANALYSIS.md
 ```
 
-Gold quantities for `piece` rows assume the default `--piece-to-kg` mode.
-See `RESULTS.md` for the latest run and `REPORT.md` for a summary write-up.
+See `BRAND_ANALYSIS.md` for the latest run.
+
+## Files
+
+| file | purpose |
+|---|---|
+| `brand_confidence.py` | the logprob B/U classifier |
+| `brand_analysis.py` | accuracy + confidence analysis |
+| `brand_eval.csv` | 90 labeled titles (`title`, `brand`) |
+| `brand_eval_scored.csv` | scored output |
+| `BRAND_ANALYSIS.md` | generated report |
+
+## Current finding
+
+On the 90-row eval set the classifier is **98.9% accurate**, but the logprob
+confidence **saturates near 0.999 for both correct and wrong calls** — the
+branded/unbranded distinction is too easy here, so the confidence barely
+discriminates (it was 0.9986 even on the single misclassification). The
+confidence only becomes informative once **genuinely ambiguous items** (private
+labels, ambiguous abbreviations, brand-like common words) are added to the set.
+
+> Older quantity/UoM CSVs (`gold.csv`, `test.csv`, `newtest*.csv`, `sample*`)
+> remain in the repo from a previous direction and are not used by the above.
