@@ -102,22 +102,24 @@ def classify(client, model, title):
         pred = "unbranded"
     else:
         pred = "branded" if p_branded >= 0.5 else "unbranded"
-    return pred, confidence, p_branded, chosen.token
+    return pred, confidence, p_branded, chosen.logprob
 
 
-def process_row(client, row, model):
-    title = (row.get("title") or "").strip()
+def process_row(client, row, model, title_col):
+    title = (row.get(title_col) or "").strip()
     if not title:
-        return {"pred_brand": "", "confidence": "", "p_branded": ""}, ""
+        return {"pred_brand": "", "confidence": "", "p_branded": "",
+                "logprob": ""}, ""
     try:
-        pred, confidence, p_branded, _ = classify(client, model, title)
+        pred, confidence, p_branded, logprob = classify(client, model, title)
         return {"pred_brand": pred,
                 "confidence": round(confidence, 4),
-                "p_branded": round(p_branded, 4)}, ""
+                "p_branded": round(p_branded, 4),
+                "logprob": round(logprob, 6)}, ""
     except Exception as exc:
         log.error("row %r failed: %s", title, exc)
-        return {"pred_brand": "", "confidence": "", "p_branded": ""}, \
-            f"{type(exc).__name__}: {exc}"
+        return {"pred_brand": "", "confidence": "", "p_branded": "",
+                "logprob": ""}, f"{type(exc).__name__}: {exc}"
 
 
 def main():
@@ -127,6 +129,8 @@ def main():
     ap.add_argument("--output")
     ap.add_argument("--model", default="gpt-4o")
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--title-col", default="title",
+                    help="column holding the product title")
     args = ap.parse_args()
 
     logging.basicConfig(level=logging.INFO,
@@ -146,7 +150,7 @@ def main():
     lock, done = threading.Lock(), [0]
 
     def worker(i):
-        res, err = process_row(client, rows[i], args.model)
+        res, err = process_row(client, rows[i], args.model, args.title_col)
         with lock:
             done[0] += 1
             if done[0] % 25 == 0:
@@ -157,7 +161,7 @@ def main():
         for i, res, err in pool.map(worker, range(len(rows))):
             results[i] = (res, err)
 
-    new_cols = ["pred_brand", "confidence", "p_branded"]
+    new_cols = ["pred_brand", "confidence", "p_branded", "logprob"]
     out_fields = fieldnames + [c for c in new_cols if c not in fieldnames]
     if "error" not in out_fields:
         out_fields.append("error")
@@ -174,9 +178,13 @@ def main():
     scored = [(r, res) for r, (res, _) in zip(rows, results)
               if res["confidence"] != ""]
     if scored and all("brand" in r for r, _ in scored):
+        def gold_cls(r):
+            b = (r.get("brand") or "").strip().lower()
+            return "unbranded" if b in ("unbranded", "") else "branded"
         correct = sum(1 for r, res in scored
-                      if res["pred_brand"] == (r.get("brand") or "").strip().lower())
-        log.info("accuracy vs gold: %d/%d = %.1f%%",
+                      if res["pred_brand"] == gold_cls(r))
+        log.info("accuracy vs gold (brand col -> branded/unbranded): "
+                 "%d/%d = %.1f%%",
                  correct, len(scored), 100 * correct / len(scored))
 
 
