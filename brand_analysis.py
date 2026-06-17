@@ -52,6 +52,7 @@ def render(rows, scored_path):
             "correct": (true == pred) if true else None,
         })
 
+
     lines, out = [], None
     buf = []
     out = buf.append
