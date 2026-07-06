@@ -1,71 +1,123 @@
 # ConfidenceScore
 
 Logprob-based confidence for classifying grocery/food product titles as
-**branded** vs. **unbranded**, using the OpenAI API.
+**branded** vs. **unbranded** — engineered so that **high-confidence-wrong
+predictions cannot ship**. Low-confidence rows route to a human review queue;
+confident rows must earn it.
 
-The confidence is derived from the model's **token logprobs** — not a
-self-reported "I'm 90% sure" number, which LLMs are known to inflate.
+All confidence values are real **token logprobs** (renormalized probability
+mass on a forced answer token) — never a self-reported "I'm 90% sure" number,
+which LLMs are known to inflate.
 
-## How it works
+## Architecture (current)
 
-For each product title the model answers a single forced token — `B` (branded)
-or `U` (unbranded) — with `logprobs=True`. The probability mass on the chosen
-letter, renormalized over `{B, U}`, is the confidence:
+The unit of classification is the **maker entity, not the title**. Deciding
+once per brand name and propagating makes self-contradictions (the same brand
+labeled both ways across the catalog) impossible by construction.
 
 ```
-P(branded)  = exp(lp_B) / (exp(lp_B) + exp(lp_U))
-prediction  = branded if P(branded) >= 0.5 else unbranded
-confidence  = max(P(branded), 1 - P(branded))
+titles ──► entity_extract.py      deterministic: candidate maker tokens
+                │                 (suffix seller-slot, corpus-confirmed
+                │                  acronyms, inline/prefix, shouty fallback),
+                │                  fuzzy entity resolution, corpus signals
+                ▼
+           entity_first.py        probe A per unique entity (GPT-4o logprob):
+                │                 "is X a maker?" + structural evidence
+                ▼
+           cross_examine.py       probes B1+B2 (adversarial framings) and an
+                │                 AGREEMENT GATE: unanimous → weakest vote;
+                │                 any disagreement → 0.5 (forced review).
+                │                 Title-probe safety net for titles where
+                │                 extraction found nothing.
+                ▼
+           recognition_gate.py    confident-branded on thin evidence must ALSO
+                │                 pass "have you actually heard of this
+                │                 company?" — morphology alone can never
+                │                 justify confidence.
+                ▼
+           final_predictions.csv  deliverable: title, prediction, confidence,
+                                  deciding_entity
 ```
 
-A *branded* product is sold under a specific company/brand name (Amul, Maggi,
-Haldiram); an *unbranded* one is generic, loose, or a commodity (Onion, Curry
-Leaves, Tomato). No quantity or unit estimation is involved.
+### Why three probes + a gate?
 
-## Usage
+A single forced-token probe can be confidently wrong by *pattern-matching*
+("coined-looking word ⇒ brand" fires at p≈0.99 on CHULLA — a Hindi stove).
+The framings are chosen to fail differently:
+
+| probe | question | catches |
+|---|---|---|
+| A | is X a maker? | the base decision |
+| B1 | is X used as a generic product word *in these titles*? | descriptors in the seller slot (`- PAPAD`) |
+| B2 | does X have a fitting non-company meaning (food, day, river, Hindi word)? | tokens that are *neither* product nor maker (TUES, GANGA) |
+| recognition | have you actually *heard of* X as a company? | unanimous ignorance — all framings pattern-matching the same wrong way |
+
+Votes combine by **agreement, not averaging** (a +5-logit framing must not
+outvote a −3 dissenter): unanimous → confidence = weakest vote; any
+disagreement → 0.5. GPT-4o at `temperature=0` still jitters across runs, which
+is why the final gate (recognition) is a deterministic cap, not another vote.
+
+### Negative result worth knowing
+
+A reasoning arbiter (chain-of-thought, then a verdict token) was tested as a
+way to resolve grey-zone conflicts — and was decisively wrong in both
+directions on exactly the contested cases (`arbiter.py`, kept as
+documentation). Reasoning makes the model more persuasive to itself, not more
+reliable, on ambiguity. The residual grey zone is genuinely hard; human review
+is its correct disposition.
+
+## Review workflow
+
+The grey zone is title-shaped but decisions are entity-shaped — reviewing
+`murukku` once clears all 9 titles that carry it.
 
 ```bash
-pip install openai
-export OPENAI_API_KEY=sk-...   # PowerShell: $env:OPENAI_API_KEY = "sk-..."
-
-python brand_confidence.py --input brand_eval.csv --output brand_eval_scored.csv \
-    [--model gpt-4o] [--workers 3]
+python review_queue.py        # grey titles -> impact-ordered decision queue
+#   fill the human_label column (branded/unbranded), then:
+python apply_reviews.py       # verdicts fan out to every affected title
 ```
 
-Input needs a `title` column (and optionally a `brand` gold label, carried
-through for scoring). Output appends `pred_brand`, `confidence`, and
-`p_branded`.
-
-## Analysis
-
-`brand_analysis.py` reads the scored file and reports how good the logprob
-confidence is: overall accuracy vs. gold, mean confidence per true class,
-confidence bands, **confidence-when-right vs. confidence-when-wrong** (does the
-logprob actually track correctness?), and a list of misclassifications.
+## Running the pipeline
 
 ```bash
-python brand_analysis.py --scored brand_eval_scored.csv --output BRAND_ANALYSIS.md
+pip install openai anthropic python-dotenv
+# .env: OPENAI_API_KEY=...  (ANTHROPIC_API_KEY only for legacy dual-stage)
+
+python entity_first.py     --input dual_stage_scored.csv   # probe A (cacheable: --cache entity_decisions.csv)
+python cross_examine.py                                    # probes B1+B2 + agreement gate + title net
+python recognition_gate.py                                 # thin-evidence knowledge cap
+python evaluate_cec.py final_predictions.csv               # grade vs the 30-case known-answer set
 ```
 
-See `BRAND_ANALYSIS.md` for the latest run.
+Every stage aborts on quota/auth errors rather than silently defaulting, and
+resumes incrementally from its cached decisions.
+
+## Results (1,000-SKU catalog)
+
+| metric | per-title baseline | entity-first + CEC |
+|---|---|---|
+| split-label entities (self-contradictions) | ~17–20 | **0** |
+| confident-wrong on 30 known-answer cases | 3 | **0** |
+| Opus-review flagged errors fixed | — | Type-1 8/8 · Type-2 7/7 · Type-3 10/10 |
+| review queue | 5.6% | 26.6% (266 titles → **240 one-glance decisions**) |
+
+The larger grey zone is the price of the guarantee — and it is honest: it
+contains the genuinely ambiguous items (obscure Hindi words, coined one-off
+names, cryptic codes). Thresholds are tunable (`--grey`, `--cap`).
 
 ## Files
 
 | file | purpose |
 |---|---|
-| `brand_confidence.py` | the logprob B/U classifier |
-| `brand_analysis.py` | accuracy + confidence analysis |
-| `brand_eval.csv` | 90 labeled titles (`title`, `brand`) |
-| `brand_eval_scored.csv` | scored output |
-| `BRAND_ANALYSIS.md` | generated report |
-
-## Current finding
-
-On the 90-row eval set the classifier is **98.9% accurate**, but the logprob
-confidence **saturates near 0.999 for both correct and wrong calls** — the
-branded/unbranded distinction is too easy here, so the confidence barely
-discriminates (it was 0.9986 even on the single misclassification). The
-confidence only becomes informative once **genuinely ambiguous items** (private
-labels, ambiguous abbreviations, brand-like common words) are added to the set.
-
-> The old quantity/UoM CSVs from a previous project direction have been removed.
+| `entity_extract.py` | deterministic extraction + entity resolution + corpus signals |
+| `entity_first.py` | probe A: per-entity logprob classification |
+| `cross_examine.py` | probes B1/B2, agreement gate, title safety net |
+| `recognition_gate.py` | knowledge cap on thin-evidence branded calls |
+| `evaluate_cec.py` | 30-case known-answer policy eval |
+| `review_queue.py` / `apply_reviews.py` | human review loop |
+| `consistency_audit.py` | Type-1 contradiction measurement |
+| `arbiter.py` | negative result: reasoning arbitration (do not use) |
+| `final_predictions.csv` | **deliverable** |
+| `final_entity_decisions.csv` | per-entity audit trail (all probe values) |
+| `brand_confidence.py` / `brand_analysis.py` | legacy per-title B/U classifier |
+| `dual_stage_confidence.py` / `reasoning_verify.py` | legacy two-stage experiments |
