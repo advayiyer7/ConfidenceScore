@@ -68,5 +68,4 @@ discriminates (it was 0.9986 even on the single misclassification). The
 confidence only becomes informative once **genuinely ambiguous items** (private
 labels, ambiguous abbreviations, brand-like common words) are added to the set.
 
-> Older quantity/UoM CSVs (`gold.csv`, `test.csv`, `newtest*.csv`, `sample*`)
-> remain in the repo from a previous direction and are not used by the above.
+> The old quantity/UoM CSVs from a previous project direction have been removed.

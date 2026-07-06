@@ -1,0 +1,1122 @@
+entity,label,p_brand,n_titles,n_categories,slots,surfaces,example_title
+harpic,branded,1.0,4,0,prefix,Harpic,HARPIC
+sakthi,branded,1.0,1,1,prefix,Sakthi,"Sakthi - Kulambu Chilli powder, 500gm"
+taski,branded,1.0,5,1,prefix,Taski,Taski Suma Ultra (L2) 5L Can
+sumabrite,branded,1.0,1,1,prefix,Sumabrite,Sumabrite Degreaser nd Heavy duty cleaner (break up HD)
+rajdhani,branded,1.0,3,3,inline|prefix,RAJDHANI|Rajdhani,Red Malka (Lal Masoor) Rajdhani
+aashirvaad,branded,1.0,1,0,prefix,AASHIRVAAD|Aashirvaad,AASHIRVAAD - ATTA 10 KG BAG
+frozenfun,branded,1.0,1,1,suffix,Frozen Fun,#_# Chocolate Fudge Overload (NAS) 500 ml - Frozen Fun
+vanhouten,branded,1.0,1,1,inline,Vanhouten,Cocoa powder (Medium Brown) Vanhouten
+prasuma,branded,1.0,9,6,suffix,Prasuma,#_# Container lid - PMK Round Paper 500 ML Plastic - Prasuma
+noto,branded,1.0,4,4,suffix,Noto,#_# FC - Orange Popsicle Ice Cream [70 Ml] - Noto
+malas,branded,1.0,2,1,prefix,Malas,Malas strawberry crush 750ml
+coolberg,branded,1.0,1,1,inline,Coolberg,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+perrier,branded,1.0,1,0,prefix,Perrier,Perrier Water 330mL
+dollur,branded,1.0,1,1,prefix,Dollur,Dollur Amla Jar
+snacc,branded,1.0,11,9,allcaps|inline|suffix,SNACC|Snacc,Dhania Pudina Chutney-SNACC
+mdh,branded,1.0,9,6,allcaps|inline|prefix,MDH|Mdh,MDH Chana Masala
+cookiecartel,branded,1.0,5,4,suffix,Cookie Cartel,#_# Caramelo Banditos Sticker - Cookie Cartel
+bico,branded,1.0,1,1,inline|suffix,BICO|Bico,#_# BC - Aam Ice Cream [300ML] - BICO
+griffith,branded,1.0,1,1,prefix,Griffith,Griffith Hot Chilli Marinade
+sweetish,branded,1.0,3,2,suffix,Sweetish,#_# Big Blue Box - Sweetish
+vikram,branded,1.0,1,1,prefix,VIKRAM|Vikram,VIKRAM - CHAKKI ATTA 30 KG
+infinite,branded,1.0,2,2,inline|prefix,Infinite,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+ether,branded,1.0,4,4,suffix,Ether,#_# SIERRA 72% Dark Chocolate Bar - Ether
+cambro,branded,1.0,2,1,prefix,Cambro,Cambro Polycarbonate GN Pan 1/2 200mm
+chonkers,branded,1.0,2,2,inline|suffix,Chonker|Chonkers,#_# Frozen OG Chocolate Chip Chonker - Chonkers
+sassyteaspoon,branded,1.0,5,5,suffix,Sassy Teaspoon,#_# Greeting Card - Sassy Teaspoon
+gozero,branded,1.0,4,1,suffix,Go Zero,#_# French Vanilla (100 ml) - Go Zero
+naturesmith,branded,1.0,1,0,prefix,Naturesmith,NATURESMITH PAPRIKA POWDER 60GM
+gendaphool,branded,1.0,2,2,suffix,Genda Phool,#_# Kesar Peda 500gms - Genda Phool
+nestle,branded,1.0,3,1,inline|prefix,Nestle,Nestle Milk Powder 1KG
+possmei,branded,1.0,2,2,prefix,Possmei,Possmei Taro Powder Premix 1kg pkt
+parsidairyfarm,branded,1.0,5,3,suffix,Parsi Dairy Farm,#_# Mango Kulfi 300gm - Parsi Dairy Farm
+meemees,branded,1.0,3,2,suffix,Meemees,#_# Rocky Road Ice-cream Tub (100ml) - Meemees
+bina,branded,1.0,4,3,suffix,Bina,#_# Sugar Free Chocolate Hazelnut Ice Cream Tub (125 ml) - Bina
+lobo,branded,1.0,1,1,prefix,Lobo,Lobo - 5 Spice Powder 65 gm 51547
+maggi,branded,1.0,2,2,prefix,Maggi,Maggi Seasoning Sauce 680Ml
+thetinytub,branded,1.0,2,1,suffix,The Tiny Tub,#_# Slide Tru Hamper Box OF 4 Outer - The Tiny Tub
+twinings,branded,1.0,2,1,prefix,Twinings|Twinning,Twinings strawberry green tea
+madhusudan,branded,1.0,1,1,prefix,Madhusudan,Madhusudan Butter
+thewholetruth,branded,1.0,3,3,suffix,The Whole Truth,#_# Soaked Chia - The Whole Truth
+anando,branded,1.0,1,1,suffix,Anando,#_# Tango Mango - Anando
+milkhana,branded,1.0,1,1,prefix,Milkhana,Milkhana Melted Cheese
+mapro,branded,1.0,2,2,prefix,Mapro,MAPRO BLACK CURRANT 1 LTR
+bardinet,branded,1.0,1,1,prefix,Bardinet,BARDINET BRANDY 1000 ML
+getaway,branded,1.0,3,3,suffix,Getaway,#_# Tender Coconut Litchi Ice Pop - Getaway
+entisichocolatier,branded,1.0,3,2,suffix,Entisi Chocolatier,#_# Plain Milk Chocolate Bar 41% [65 g] - Entisi Chocolatier
+entisi,branded,1.0,3,3,inline,Entisi,#_# Plain Milk Chocolate Bar 41% [65 g] - Entisi Chocolatier
+hamdard,branded,1.0,1,1,prefix,Hamdard,HAMDARD ROOHAFZA 750ML
+lafolie,branded,1.0,3,3,suffix,La Folie|La folie,#_# The Berry Good Bar 72% [Chocolate Bar] - La Folie
+weikfield,branded,1.0,1,0,inline,Weikfield,Corn Flour Weikfield
+blinkitinstamart,branded,1.0,1,1,suffix,Blinkit   Instamart,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+blinkit,branded,1.0,1,1,inline,Blinkit,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+instamart,branded,1.0,1,1,inline,Instamart,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+cremica,branded,1.0,1,1,prefix,Cremica,Cremica Chef Choice Mayo
+wyke,branded,1.0,1,1,inline,Wyke,Cheddar White Wyke 2.5 Kg
+tropicana,branded,1.0,2,1,prefix,Tropicana,Tropicana Orange Juice 1 Ltr
+hoegaarden,branded,1.0,2,1,prefix,Hoegaarden,Hoegaarden Belgian Blanche
+knorr,branded,1.0,2,2,inline|prefix,Knor|Knorr,Chicken Broth Powder Knorr
+tata,branded,1.0,2,1,prefix,Tata,Tata Agni Dust Tea 1 kg
+amul,branded,1.0,4,3,inline|prefix,Amul,Amul Cheese Spread 200 Gm
+shresth,branded,1.0,1,1,prefix,Shresth,Shresth Gold Milk 500 Ml
+caterspoint,branded,1.0,1,1,inline,Caterspoint,SLEEVES 750 ML BAGASSE CATERSPOINT
+amrut,branded,1.0,1,1,prefix,Amrut,Amrut fusion single malt whisky 750 ml
+hitachi,branded,1.0,1,1,inline,Hitachi,TL Hitachi UX Makeup 800ml
+monin,branded,1.0,6,3,prefix,Monin,Monin Peach flavour
+itc,branded,1.0,2,2,allcaps,ITC,Chicken wings Coated ( ITC )
+grover,branded,1.0,1,1,prefix,Grover,Grover Selecte Chenin Blanc 750 Ml
+cothas,branded,1.0,1,1,prefix,Cothas,#_# Cothas Blend Coffee 200 Gm - Murukku
+dabur,branded,1.0,1,1,prefix,Dabur,Dabur Honey
+lefour,branded,1.0,2,2,suffix,Le Four,#_# Tag - Gluten-free Paleo Cookies - Le Four
+fanta,branded,1.0,1,0,prefix,Fanta,Fanta Can 300ml-GST@ 28%
+fevicol,branded,1.0,1,0,prefix,Fevicol,Fevicol 1 Kg
+timmys,branded,1.0,1,1,prefix,Timmys,Timmys Food Bag
+micks,branded,1.0,1,1,prefix,Micks,Micks Lotus Biscoff Biscuit
+agnessi,branded,1.0,1,1,prefix,Agnessi,Agnessi Penne Pasta
+outsource,branded,1.0,1,1,suffix,Outsource,Rasila Rajma - Outsource
+budweiser,branded,1.0,2,0,prefix,Budweiser,Budweiser Premium
+kissan,branded,1.0,1,1,prefix,Kissan,Kissan Tomato Sause Dip
+nescafe,branded,1.0,1,0,inline,Nescafe,Coffee powder Nescafe 500 gm
+diversey,branded,1.0,1,1,prefix,Diversey,Diversey Spray Bottles
+mtr,branded,1.0,1,1,allcaps,MTR,MTR Sambar
+urbani,branded,1.0,1,0,inline,Urbani,Truffle Oil Urbani 250 ml
+amore,branded,1.0,1,1,suffix,Amore,#_# Wooden Spoon - Amore
+aava,branded,1.0,1,1,inline,Aava,Natural Mineral Water Aava 500 ml
+dadus,branded,1.0,1,1,suffix,Dadus,#_# Motichur Laddu 500gms - Dadus
+hungritos,branded,1.0,1,1,prefix,Hungritos,Hungritos Permium without Skin On Fries 9Mm
+pitambari,branded,1.0,2,0,prefix,Pitambari,Pitambari 150 gm
+godrej,branded,1.0,1,1,inline,Godrej,Air Freshener Godrej
+sandburgs,branded,1.0,1,1,prefix,Sandburgs,Sandburgs Truffle Barbeque sauce (500 gram)
+sarwar,branded,1.0,1,1,prefix,Sarwar,Sarwar Onion Powder 450gm
+aachi,branded,1.0,1,1,prefix,Aachi,AACHI KULAMBU MILAKAI STAFF
+corona,branded,1.0,1,1,prefix,Corona,Corona Lager Beer 330 ml
+chatramue,branded,1.0,1,1,inline,Chatramue,Thai Tea Mix 400g packet Chatramue
+ketel,branded,1.0,1,1,prefix,Ketel,Ketel One Vodka 750 ml
+aavin,branded,1.0,1,0,prefix,Aavin,Aavin Milk
+angostura,branded,1.0,1,1,allcaps,ANGOSTURA,ANGOSTURA Aromatic bitters (200ML)
+stroopie,branded,1.0,1,0,suffix,Stroopie,#_# Big Bag - Stroopie
+kimirica,branded,1.0,1,1,prefix,Kimirica,Kimirica White Gold Tooth Brush pack
+sancc,branded,1.0,1,1,suffix,Sancc,White sesame Seeds 100G - Sancc
+tastecraft,branded,1.0,1,1,prefix,Tastecraft,Tastecraft Pistachio Flavoured Syrup 750ml
+flanders,branded,1.0,1,1,suffix,Flanders,Mozzarella Cheese - Flanders
+eastmade,branded,0.9999,2,2,prefix,EASTMADE|Eastmade,EASTMADE - CUMIN (JEERA) 1 KG
+vkl,branded,0.9999,2,1,allcaps|prefix,VKL|Vkl,VKL PERI PERI MARINADE
+cartel,branded,0.9999,5,4,inline,Cartel,#_# Caramelo Banditos Sticker - Cookie Cartel
+mithainamkeen,branded,0.9999,1,1,suffix,Mithai & Namkeen,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+foodoo,branded,0.9999,1,1,inline,Foodoo,PASSION FRUIT SYRUP(1 LTR) Foodoo
+sprite,branded,0.9999,2,0,prefix,Sprite,SPRITE 250ML
+lotus,branded,0.9999,4,2,inline|prefix,Lotus,Lotus Flour
+termocool,branded,0.9999,1,1,prefix,Termocool,Termocool morded box
+parsi,branded,0.9999,5,3,inline,Parsi,#_# Mango Kulfi 300gm - Parsi Dairy Farm
+president,branded,0.9999,1,1,prefix,President,President Butter Unsalted 500gm
+truth,branded,0.9999,3,3,inline,Truth,#_# Soaked Chia - The Whole Truth
+morde,branded,0.9999,1,1,inline,Morde,GK-Morde - Hazelnut Chocopaste 1 Kg 140027
+nandini,branded,0.9999,1,1,inline,Nandini,Goodlife Milk 1ltr pkt Nandini
+fortune,branded,0.9999,1,1,prefix,Fortune,Fortune Aata
+sargvo,branded,0.9999,1,1,prefix,Sargvo,Sargvo-Drumsticks
+delmonte,branded,0.9999,1,1,prefix,Delmonte,Delmonte - Eggless Mayo
+shan,branded,0.9999,1,0,inline,Shan,Nihari Masala  (Shan)
+gfb,branded,0.9999,1,1,allcaps,GFB,GFB Mushroom Patty
+newtrition,branded,0.9999,1,1,prefix,Newtrition,"Newtrition - Lemon Ginger, 500 ML"
+ashok,branded,0.9999,1,1,prefix,Ashok,Ashok Besan
+chandras,branded,0.9999,1,1,inline,Chandras,Long Note Book 200 Pgs Chandras SB
+bikkgane,branded,0.9999,1,1,inline,Bikkgane,Napkin Bikkgane
+ananda,branded,0.9999,1,0,prefix,Ananda,ANANDA PANEER 1 KG
+kinley,branded,0.9998,3,1,inline|prefix,Kiley|Kinley,Soda Water Kinley 750 ml
+oaksmith,branded,0.9998,1,0,prefix,Oaksmith,Oaksmith
+thums,branded,0.9998,1,0,prefix,Thums,Thums Up 250 ml
+colin,branded,0.9998,2,2,prefix,Colin,Colin Spray 500ml
+leaveapplication,branded,0.9998,1,0,suffix,LEAVE APPLICATION,BOOKLET - LEAVE APPLICATION
+pril,branded,0.9998,1,0,prefix,Pril,Pril Liquid
+cbtl,branded,0.9998,2,2,allcaps,CBTL,Hazelnut Brownie Outer Sticker (CBTL)
+prepit,branded,0.9997,1,1,prefix,Prepit,Prepit Hyderabad Biriyan 1 kg
+bru,branded,0.9997,1,0,prefix,Bru,Bru Coffee 500g
+flyp,branded,0.9997,2,1,allcaps,FLYP,Paper Cup 350ml (10'' Oz) FLYP
+fryola,branded,0.9996,1,0,prefix,Fryola,Fryola Oil
+redchillywholekashmiri,branded,0.9996,1,1,suffix,Red Chilly Whole Kashmiri,Kashmiri Mirch Aakhu - Red Chilly Whole Kashmiri
+coke,branded,0.9995,3,1,prefix,Coke,Coke 750 Ml
+biscoff,branded,0.9995,4,4,inline|prefix,Biscoff,Biscoff Biscuit Lotus
+wonder,branded,0.9995,2,2,prefix,Wonder,Wonder Wipes
+teaspoon,branded,0.9994,5,5,inline,Teaspoon,#_# Greeting Card - Sassy Teaspoon
+chuk,branded,0.9994,2,1,inline|prefix,Chuk,7 inch Plate Chuk
+parry,branded,0.9994,1,0,prefix,Parry,Parry Sugar White
+nutrela,branded,0.9994,1,0,prefix,Nutrela,Nutrela (1pkt)
+murukku,branded,0.9993,9,9,inline|suffix,Murkku|Murukku|murukku,#_# Asafoetida / Hing - murukku
+mbk,branded,0.9993,1,1,allcaps,MBK,Thai Jasmine Rice 2kg pkt MBK
+chounk,branded,0.9993,3,3,inline,Chonk|Chounk,Turmeric (Haldi) Powder Chounk
+spice,branded,0.9993,3,3,inline|prefix,Spice,Lobo - 5 Spice Powder 65 gm 51547
+griseldas,branded,0.9993,1,1,prefix,Griselda|Griselda's,#_# Griselda's Red Velvet Sticker (Eggless) - Cookie Cartel
+sandhouse,branded,0.9993,1,1,inline,Sandhouse,11.5x11.5 (Round) Sandhouse Butter paper (40GSM)
+habit,branded,0.9992,1,1,prefix,Habit,Habit Olives Green Pitted 3Kg
+cellofin,branded,0.9991,1,0,prefix,Cellofin,CELLOFIN PAPER
+chef,branded,0.9991,5,3,inline|prefix,Chef|Chef's|Chefs,Chef Coat S36  Black Half Sleeve
+rsons,branded,0.9991,1,1,inline,Rsons,Chilled Chicken Thigh Boneless 1 kg (Rsons)
+saladspoint,branded,0.999,1,1,inline,Saladspoint,TOP COVER OF BOX 750 ML SALADSPOINT
+whitepepperpowder100gm30291,branded,0.9989,1,1,suffix,White Pepper Powder 100 gm 30291,MDH - White Pepper Powder 100 gm 30291
+junos,branded,0.9987,1,1,inline,Junos,Pizza Base 8 inch Whole Wheat Pan Crust (Junos)
+blackpaperwholekalimirch,branded,0.9986,1,1,suffix,BLACK PAPER WHOLE  KALI MIRCH,3 EASTMADE - BLACK PAPER WHOLE (KALI MIRCH)
+nam,branded,0.9986,1,1,prefix,Nam,Nam Shop Sticker   Prawn Crackers Large
+kcco,branded,0.9985,1,0,prefix,Kcco,Kcco Tray Big
+vijay,branded,0.9985,1,1,inline,Vijay,Rice flour Vijay 1KG-SNACC
+coolberggingerflavour,branded,0.9984,1,1,suffix,Coolberg  Ginger Flavour,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+art,branded,0.9984,3,2,inline,Art,Chef's Art - Crispy Cajun Breading Mix 1 Kg H51176
+namjai,branded,0.9984,1,0,inline,Namjai,GREEN CURRY PASTE NAMJAI 1 KG
+samseer,branded,0.9983,1,1,prefix,Samseer,SAMSEER MARK
+caramelo,branded,0.9982,4,3,inline|prefix,Caramel|Caramelo,#_# Caramelo Banditos Sticker - Cookie Cartel
+khoyapindi1kg,branded,0.9981,1,1,suffix,Khoya Pindi 1KG,Shudh Garhwal - Khoya Pindi 1KG
+mothbeans,branded,0.9981,1,1,suffix,Moth Beans,Moth / Math Atta - Flour - Moth Beans
+jamaicanjerkseasoning400gm,branded,0.9981,1,1,suffix,Jamaican Jerk Seasoning 400 gm,Chefs Art - Jamaican Jerk Seasoning 400 gm
+mother,branded,0.9978,2,2,prefix,Mother|Mother's,Mother Dairy milk
+piripirisprinkler250gm51189,branded,0.9978,1,1,suffix,Piri Piri Sprinkler 250 gm 51189,Chefs Art - Piri Piri Sprinkler 250 gm 51189
+folie,branded,0.9974,2,2,inline,Folie,#_# The Berry Good Bar 72% [Chocolate Bar] - La Folie
+royal,branded,0.9972,2,2,inline|prefix,Royal,Luster Dust Royal Gold
+camino,branded,0.9971,1,1,prefix,Camino,Camino Real Gold 750Ml
+gtc,branded,0.9971,1,0,allcaps,GTC,GTC Pizza Box 9x9
+zero,branded,0.997,4,1,inline,Zero,#_# French Vanilla (100 ml) - Go Zero
+goodlife,branded,0.9969,1,1,prefix,Goodlife,Goodlife Milk 1ltr pkt Nandini
+sdu,branded,0.9966,1,1,allcaps,SDU,SDU Deva Chardonnay White wine 750ml
+acton,branded,0.9965,1,1,allcaps,ACTON,A-005 Grill and Oven Cleaner ACTON
+evd,branded,0.9963,1,1,prefix,Evd,EVD DAIRY WHITENER 1 KG
+softsponge,branded,0.9963,1,1,suffix,SOFT SPONGE,SCOTCH BRITE - SOFT SPONGE
+egglesschocolavacakepremix1kgambient148873,branded,0.9958,1,1,suffix,Eggless Choco Lava Cake Premix 1 Kg Ambient 148873,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+mrd,branded,0.9958,1,0,allcaps,MRD,MRD Stickers
+scotch,branded,0.9957,5,2,inline|prefix,SCOTCH|Scotch,Butter Scotch DF Bite
+dairy,branded,0.9955,7,5,inline,Dairy,EVD DAIRY WHITENER 1 KG
+jain,branded,0.9955,1,1,prefix,Jain,Jain Hing Powder
+four,branded,0.9954,2,2,inline,Four,#_# Tag - Gluten-free Paleo Cookies - Le Four
+stafftoordal1kgnonip131965,branded,0.9949,1,1,suffix,Staff Toor Dal 1 Kg  Non IP  131965,Economy - Staff Toor Dal 1 Kg (Non IP) 131965
+thinkoriginshazelnutcoldfiltercoffeefssai,branded,0.9948,1,1,suffix,THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+chutney,branded,0.9946,4,4,inline|suffix,CHUTNEY|Chutney,Dhania Pudina Chutney-SNACC
+cucumber,branded,0.9944,2,2,inline|suffix,Cucumber,Kakdi - Cucumber
+withbarrier1270,branded,0.9943,1,1,suffix,With Barrier  12 70,POUCH 200MM X 250MM - Poly Pet - With Barrier (12/70)
+goose,branded,0.9941,1,1,inline,Goose,Sriracha Hot Chilli Sauce Flying Goose 730 gm
+aanch,branded,0.9937,1,0,prefix,Aanch,AANCH COVER
+barcodelable50mmx25mmnontearable,branded,0.9935,1,1,suffix,Barcode Lable 50mmX25mm Non Tearable,ROW - Barcode Lable 50mmX25mm Non Tearable
+fun,branded,0.9933,1,1,inline,Fun,#_# Chocolate Fudge Overload (NAS) 500 ml - Frozen Fun
+ucc,branded,0.9931,1,1,allcaps,UCC,UCC 2door 3drawer + raised BM + 1/6gnx6
+reeses,branded,0.9924,1,1,inline,Reeses,#_# The Godfather (Reeses peanut butter cup) Cookie Dough - Cookie Cartel
+raspberryduet60ml,branded,0.9921,1,1,suffix,Raspberry Duet  60 ml,Flow Wrap Rolls - Raspberry Duet (60 ml)
+chulla,branded,0.9906,1,0,prefix,Chulla,CHULLA
+jacobs,branded,0.9901,1,1,prefix,Jacobs,Jacobs Creek Red 750Ml
+thundercrush,branded,0.9897,1,0,inline,Thundercrush,SP Thundercrush French Fries 9mm
+chakkiatta30kg,branded,0.9893,1,1,suffix,CHAKKI ATTA 30 KG,VIKRAM - CHAKKI ATTA 30 KG
+windmill,branded,0.9893,1,1,prefix,Windmill,Windmill Potato starch
+canteen,branded,0.9892,2,1,prefix,Canteen,Canteen Tea Cup (130ML)
+pmk,branded,0.989,2,2,allcaps,PMK,#_# Container lid - PMK Round Paper 500 ML Plastic - Prasuma
+popsicle,branded,0.989,1,1,inline,Popsicle,#_# FC - Orange Popsicle Ice Cream [70 Ml] - Noto
+roohafza,branded,0.9879,1,1,inline,Roohafza,HAMDARD ROOHAFZA 750ML
+momo,branded,0.9878,3,3,inline|prefix,Momo|Momos,Momo Steamer
+cantener,branded,0.9876,1,1,prefix,Cantener,Cantener Half
+cuminjeera1kg,branded,0.9874,1,1,suffix,CUMIN  JEERA  1 KG,EASTMADE - CUMIN (JEERA) 1 KG
+tag,branded,0.9868,1,1,prefix,Tag,#_# Tag - Gluten-free Paleo Cookies - Le Four
+kobij,branded,0.9866,1,1,prefix,Kobij,Kobij-Cabbage
+flow,branded,0.9864,1,1,prefix,Flow,Flow Wrap Rolls - Raspberry Duet (60 ml)
+cassatar73mm,branded,0.9848,1,1,suffix,Cassata  r 73mm,Butter Paper - Cassata (r=73mm)
+finagel,branded,0.9841,1,0,prefix,Finagel,Finagel
+coca,branded,0.9838,2,1,prefix,Coca,Coca cola 750ml
+challenge,branded,0.9831,1,1,inline,Challenge,Royal Challenge
+think,branded,0.9815,3,3,inline|prefix,Thin|Think,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+star,branded,0.979,1,1,prefix,Star,Star Papad
+row,branded,0.9777,1,1,allcaps|prefix,ROW|Row,ROW - Barcode Lable 50mmX25mm Non Tearable
+onesta,branded,0.9777,1,1,inline,Onesta,Grated mozzarella New Onesta
+egglessmayo,branded,0.9774,1,1,suffix,Eggless Mayo,Delmonte - Eggless Mayo
+shudh,branded,0.977,1,1,prefix,Shudh,Shudh Garhwal - Khoya Pindi 1KG
+wyn,branded,0.9763,1,1,inline,Wyn,Gulab Jamun (Wyn)
+thondaika,branded,0.9763,1,0,prefix,Thondaika,Thondaika
+pipers,branded,0.9759,1,0,inline,Pipers,100 Pipers. 750Ml
+angel,branded,0.9716,1,1,inline,Angel,Teqila Blanco Don Angel 750 Ml
+bayleaf,branded,0.9707,1,1,prefix,Bayleaf,Bayleaf Chounk
+vat,branded,0.9707,1,0,prefix,Vat,Vat 69
+deva,branded,0.9698,1,1,inline,Deva,SDU Deva Chardonnay White wine 750ml
+aroma,branded,0.9674,2,2,inline|prefix,Aroma|Aromat,Aroma Diffuser Liquid
+gud,branded,0.9649,1,0,prefix,Gud,Gud
+lemonginger500ml,branded,0.9627,1,1,suffix,Lemon Ginger  500 ML,"Newtrition - Lemon Ginger, 500 ML"
+pine,branded,0.9615,1,1,inline,Pine,Blue Pine Artesian Water - 750 ML - GST @18 %
+flying,branded,0.961,1,1,inline,Flying,Sriracha Hot Chilli Sauce Flying Goose 730 gm
+rubberkitchengloves,branded,0.9579,1,1,suffix,Rubber Kitchen Gloves,Scotch Brite - Rubber Kitchen Gloves
+ciclo,branded,0.9497,1,1,prefix,Ciclo,Ciclo Printed Cake Box 2Pc
+daily,branded,0.9489,2,2,prefix,Daily,DAILY FRESH MILLETS IDLI AND DOSA BATTER POUCH 1/2KG
+transfer,branded,0.9433,1,1,prefix,Transfer,Transfer Notebook
+poly,branded,0.9417,3,3,inline|prefix,Polly|Poly,Poly Veg logo1500&#215;23
+hollo,branded,0.9417,1,0,prefix,Hollo,HOLLO MAT3125*5
+afza,branded,0.9408,1,1,inline,Afza,ROOH AFZA
+carnattion,branded,0.9363,1,1,prefix,Carnattion,CARNATTION MILK  405 GM ( EVAPORATED MILK )
+saunf,branded,0.9344,1,1,suffix,Saunf,Aniseed Whole - Saunf
+one,branded,0.9219,1,1,inline,One,Ketel One Vodka 750 ml
+macroni,branded,0.9196,1,1,prefix,Macroni,Macroni Rajdhani
+meduim,branded,0.9173,1,1,suffix,Meduim,Plastic Storage Boxes - Meduim
+suma,branded,0.9149,2,2,inline|prefix,Suma,Taski Suma Ultra (L2) 5L Can
+supli,branded,0.9149,1,1,inline,Supli,Dust Pan  Supli
+miami,branded,0.9149,1,1,inline,Miami,GK-Miami Waffle Pizza Pkg Box 1PKT 100PC GK Dry 137504
+bandan,branded,0.9149,1,0,prefix,Bandan,Bandan Cap
+cello,branded,0.906,3,1,prefix,Cello,CELLO TAPE BIG PLAIN 3 INCH
+oyester,branded,0.9019,2,1,prefix,Oyester|Polyester,Oyester Sauce- non veg
+rasila,branded,0.8903,1,1,prefix,Rasila,Rasila Rajma - Outsource
+bbk,branded,0.8808,1,1,allcaps,BBK,Cotton BBK Apron
+pillar,branded,0.8775,1,0,prefix,Pillar,Pillar
+ajino,branded,0.8688,1,1,prefix,Ajino,AJINO MOTO
+sassy,branded,0.867,5,5,inline,Sassy,#_# Greeting Card - Sassy Teaspoon
+sierra,branded,0.8652,1,1,allcaps,SIERRA,#_# SIERRA 72% Dark Chocolate Bar - Ether
+origins,branded,0.8634,1,1,inline,Origins,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+voila,branded,0.8559,1,1,inline,Voila,Silken Tofu 300g Voila
+kumatia,branded,0.852,1,0,prefix,Kumatia,Kumatia
+rail,branded,0.852,1,0,inline,Rail,QT Rail
+aakhu,branded,0.848,1,1,inline,Aakhu,Kashmiri Mirch Aakhu - Red Chilly Whole Kashmiri
+tango,branded,0.8439,1,1,prefix,Tango,#_# Tango Mango - Anando
+party,branded,0.8439,2,2,inline|prefix,Party,Party Popper 40 CM
+creek,branded,0.8418,1,1,inline,Creek,Jacobs Creek Red 750Ml
+topper,branded,0.8397,1,0,prefix,Topper,Topper
+wet,branded,0.8333,2,2,inline|prefix,Wet,#_# Mop Refill [Wet]
+story,branded,0.8267,1,1,inline,Story,Cutlery Set The Cake Story
+pokchay,branded,0.8267,1,0,prefix,Pokchay,Pokchay
+active,branded,0.8222,1,1,prefix,Active,Active X Mustard Oil 500mL
+tikho,branded,0.8199,1,1,inline,Tikho,Farali Chevdo (Tikho)
+hazelnutchocopaste1kg140027,branded,0.8081,1,1,suffix,Hazelnut Chocopaste 1 Kg 140027,GK-Morde - Hazelnut Chocopaste 1 Kg 140027
+kulambuchillipowder500gm,branded,0.8032,1,1,suffix,Kulambu Chilli powder  500gm,"Sakthi - Kulambu Chilli powder, 500gm"
+zukni,branded,0.8032,1,0,prefix,Zukni,Zukni Green
+roleys,branded,0.7982,1,1,inline,Roleys,#_# Assorted Roleys (Box of 6) - Meemees
+chapad,branded,0.7931,1,1,prefix,Chapad,CHAPAD HEAVY
+tues,branded,0.7773,1,1,inline,Tues,COLOUR CODE DOTT TUES
+ganga,branded,0.7718,1,0,inline,Ganga,ATTA GANGA
+chocolatier,branded,0.7549,3,3,inline,Chocolatier,#_# Plain Milk Chocolate Bar 41% [65 g] - Entisi Chocolatier
+crown,branded,0.7549,1,1,inline,Crown,Ajinomoto (Golden Crown)
+mark,branded,0.7491,1,1,inline,Mark,SAMSEER MARK
+grade1fine,branded,0.7491,1,1,suffix,Grade 1  Fine,Moong Dal - Grade 1 (Fine)
+tru,branded,0.7432,1,1,inline,Tru,#_# Slide Tru Hamper Box OF 4 Outer - The Tiny Tub
+trust,branded,0.7432,1,1,inline,Trust,Breakfast Sugar Trust 1 Kg
+jau,branded,0.7372,1,1,prefix,Jau,Jau / Ghat
+genda,branded,0.7372,2,2,inline,Genda,#_# Kesar Peda 500gms - Genda Phool
+chat,branded,0.7372,1,1,prefix,Chat,CHAT PLATE 6 INCH
+varavrage,branded,0.7186,1,1,inline,Varavrage,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+noodal,branded,0.7122,1,0,inline,Noodal,SS  NOODAL CHANNI
+ceaser,branded,0.7058,1,1,inline,Ceaser,#_# Black Ceaser Dough - Cookie Cartel
+how,branded,0.6859,1,1,inline,How,Rice Flat Noodle 10mm   500g pkt   How How
+agni,branded,0.6792,1,1,inline,Agni,Tata Agni Dust Tea 1 kg
+papad,branded,0.6442,3,2,inline|prefix|suffix,PAPAD|Papad,Papad ( Big)
+don,branded,0.6442,1,1,inline,Don,Teqila Blanco Don Angel 750 Ml
+garhwal,branded,0.6298,1,1,inline,Garhwal,Shudh Garhwal - Khoya Pindi 1KG
+wvf,branded,0.6298,1,1,inline,Wvf,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+shop,branded,0.6225,1,1,inline,Shop,Nam Shop Sticker   Prawn Crackers Large
+moth,branded,0.6151,2,2,prefix,Moth|Mouth,Moth / Math Atta - Flour - Moth Beans
+pcp,branded,0.6077,1,1,allcaps,PCP,Chicken PCP (Bone)
+sos,branded,0.5889,1,1,allcaps,SOS,Outer Bag SOS 70 GSM - Snacc
+jali,branded,0.5851,1,1,prefix,Jali,JALI MAT 10MM HEAVY
+moto,branded,0.5737,1,1,inline,Moto,AJINO MOTO
+cleanedcrate,branded,0.5622,1,1,inline,Cleanedcrate,UH GREEN CAPSICUMWHOLE CLEANEDCRATE
+kanga,branded,0.5583,1,1,inline,Kanga,Sweetpotato (Kanga)
+real,branded,0.539,2,2,inline|prefix,Real,Real Pineapple Juice
+yu001517,branded,0.539,1,1,allcaps,YU001517,YU001517 Sensor Magnetiv 2 Nc
+plum,branded,0.539,1,1,prefix,Plum,Plum Essence
+permium,branded,0.5312,1,1,inline,Permium,Hungritos Permium without Skin On Fries 9Mm
+w33,branded,0.5234,1,1,allcaps,W33,MF White Compound CO W33
+juna,branded,0.5234,1,1,inline,Juna,SCOTCH BRITE  JUNA
+rooh,unbranded,0.5,1,1,prefix,Rooh,ROOH AFZA
+dott,unbranded,0.4922,1,1,inline,Dott,COLOUR CODE DOTT TUES
+ban,unbranded,0.4922,1,1,allcaps,BAN,Carrot Beans Poriyal(ME)-A-BAN
+d15,unbranded,0.4688,1,1,allcaps,D15,Dark Compound Co D15 500Gms
+cane,unbranded,0.461,1,1,inline,Cane,COKE CANE
+golden,unbranded,0.4301,2,2,inline|prefix,Golden,Golden Dust
+cmc,unbranded,0.4301,1,0,prefix,Cmc,Cmc Powder
+eggfree,unbranded,0.4149,1,1,prefix,Eggfree,EGGFREE TEA TIME VANILLA MUFFIN
+outlet,unbranded,0.4149,1,1,inline,Outlet,Aluminium Container 750ml with Lid (Outlet)
+chinesereadyschezwansaucefrozen1kg,unbranded,0.4149,2,1,suffix,Chinese Ready Schezwan Sauce  Frozen   1 Kg BB0009|Chinese Ready Schezwan Sauce  Frozen  1 Kg,RTE-Seths - Chinese Ready Schezwan Sauce (Frozen) 1 Kg
+good,unbranded,0.4073,2,2,inline|prefix,Good,Good Night Machine
+delta,unbranded,0.3923,1,1,inline,Delta,Fruit Filling Mango Delta
+gate,unbranded,0.3923,1,1,prefix,Gate,#_# Gate Pass Book
+gold,unbranded,0.3849,7,7,inline|prefix,Gold,Camino Real Gold 750Ml
+rte,unbranded,0.3849,2,1,allcaps,RTE,RTE-Seths - Chinese Ready Schezwan Sauce (Frozen) 1 Kg
+diya,unbranded,0.363,1,0,prefix,Diya,Diya Oil
+dfm,unbranded,0.3558,1,1,allcaps,DFM,Maida DFM 50 Kg Unbrand
+tiny,unbranded,0.3486,2,1,inline,Tiny,#_# Slide Tru Hamper Box OF 4 Outer - The Tiny Tub
+tikona,unbranded,0.3451,1,1,prefix,Tikona,Tikona Paratha
+iceberg,unbranded,0.3416,1,0,prefix,Iceberg,Iceberg
+teqila,unbranded,0.3346,1,1,prefix,Teqila,Teqila Blanco Don Angel 750 Ml
+king,unbranded,0.3242,1,1,inline,King,Kitchen King MDH 100 Gm- GST @ 5%
+selecte,unbranded,0.3208,1,1,inline,Selecte,Grover Selecte Chenin Blanc 750 Ml
+newyork,unbranded,0.2942,1,1,prefix,Newyork,Newyork Cheese Filling
+m21,unbranded,0.2689,1,1,allcaps,M21,Milk Compound Slab M21
+rocher,unbranded,0.2451,1,1,inline,Rocher,#_# Frozen Chonk O Rocher - Chonkers
+dust,unbranded,0.2282,5,4,inline|prefix,Dust,Dust Pan  Supli
+register,unbranded,0.2282,1,1,inline,Register,InWard Register
+splash,unbranded,0.1919,1,1,inline,Splash,Food Colours Splash 200g Assorted
+tetra,unbranded,0.1919,2,2,inline,Tetra,MILK AMUL TETRA PACK
+kat,unbranded,0.1711,1,1,inline,Kat,Kit Kat
+tops,unbranded,0.1403,1,0,inline,Tops,Sauce Chilli Green Tops
+burata,unbranded,0.1366,1,1,prefix,Burata,Burata Cheese 250 Grm
+kitchen,unbranded,0.1366,3,3,inline|prefix,Kitchen,Scotch Brite - Rubber Kitchen Gloves
+tar,unbranded,0.1259,1,1,prefix,Tar,#_# Tar Brush (Dosa Bhatti)
+choco,unbranded,0.1128,2,2,allcaps|inline,COCO|Choco,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+bite,unbranded,0.1112,5,2,inline,Bite|Brite,Butter Scotch DF Bite
+keora,unbranded,0.1023,1,0,prefix,Keora,Keora Water 500Ml
+bark,unbranded,0.0967,1,1,inline,Bark,Gold Bark (Leaf)
+rawa,unbranded,0.0888,2,2,inline,Rawa|Rawas,IDLY RAWA
+food,unbranded,0.0876,3,3,inline|prefix,Food,Food Colours Splash 200g Assorted
+herble,unbranded,0.0706,1,1,inline,Herble,Amla Sabut Herble
+chavali,unbranded,0.0695,1,0,prefix,Chavali,Chavali Red
+sharpner,unbranded,0.0675,1,0,prefix,Sharpner,Sharpner
+n20,unbranded,0.0637,1,1,allcaps,N20,N20 Whipped Cream Chargers
+river,unbranded,0.0601,1,1,prefix,River,River Sole Fillet
+chops,unbranded,0.0558,1,0,prefix,Chops,Chops
+night,unbranded,0.0489,1,1,inline,Night,Good Night Machine
+death,unbranded,0.0474,1,1,inline,Death,#_# Jar - Death By Chocolate - Getaway
+malka,unbranded,0.0421,1,1,inline,Malka,Red Malka (Lal Masoor) Rajdhani
+dummy,unbranded,0.0402,1,1,inline,Dummy,Designer Dummy
+godfather,unbranded,0.0368,1,1,inline,Godfather,#_# The Godfather (Reeses peanut butter cup) Cookie Dough - Cookie Cartel
+mogra,unbranded,0.0368,1,1,prefix,Mogra,Mogra Staff Rice (Broken Basmati Rice) 30 Kg 138777
+magnetiv,unbranded,0.0351,1,1,inline,Magnetiv,YU001517 Sensor Magnetiv 2 Nc
+farm,unbranded,0.0346,6,3,inline,Farm,#_# Mango Kulfi 300gm - Parsi Dairy Farm
+triplesec,unbranded,0.0331,1,0,prefix,Triplesec,Triplesec
+pomaceoliveoil,unbranded,0.0331,1,1,suffix,Pomace Olive Oil,San Marzano - Pomace Olive Oil
+ziplock,unbranded,0.0321,1,1,prefix,Ziplock,Ziplock Bags
+quarry,unbranded,0.0302,1,1,prefix,Quarry,Quarry And Tile Floor Cleaner (120X2Oz)
+ghat,unbranded,0.0293,1,1,inline,Ghat,Jau / Ghat
+banarasi,unbranded,0.0284,1,1,allcaps,BANARASI,BANARASI LAL PEDA-200 Gms
+vala,unbranded,0.0276,1,1,inline,Vala,Noodle ( Thin Vala )
+lto,unbranded,0.0244,1,1,allcaps,LTO,Korean LTO Menu
+m38,unbranded,0.0213,1,1,allcaps,M38,T Shirt Black NM M38
+designer,unbranded,0.021,1,1,prefix,Designer,Designer Dummy
+math,unbranded,0.0197,1,1,inline,Math,Moth / Math Atta - Flour - Moth Beans
+rampuri,unbranded,0.0194,1,1,prefix,Rampuri,RAMPURI MIRCH
+papaya,unbranded,0.0191,3,0,prefix,Papaya,PAPAYA
+strawberrysmoothiepremixpowder58gx15sachet,unbranded,0.0164,1,1,suffix,Strawberry Smoothie Premix Powder  58 G x 15 sachet,GK - Infinite Food - Strawberry Smoothie Premix Powder (58 G x 15 sachet)
+handi,unbranded,0.0152,7,6,inline|prefix,Hand|Handi,Biryani Handi 750 GM
+economy,unbranded,0.0124,1,1,prefix,Economy,Economy - Staff Toor Dal 1 Kg (Non IP) 131965
+bombay,unbranded,0.0115,1,1,prefix,Bombay,Bombay pao
+sheek,unbranded,0.011,1,1,inline,Sheek,STICKER SHEEK KABAB
+s36,unbranded,0.0096,1,1,allcaps,S36,Chef Coat S36  Black Half Sleeve
+luster,unbranded,0.0096,1,1,prefix,Luster,Luster Dust Royal Gold
+nonbromite,unbranded,0.0076,1,1,prefix,Nonbromite,NONBROMITE BREAD IMPROVER 1 KG 0157
+pocha,unbranded,0.007,2,1,inline|prefix,Pocha,Floor Duster (Pocha)
+marzano,unbranded,0.0067,1,1,inline,Marzano,San Marzano - Pomace Olive Oil
+sweetpotato,unbranded,0.0062,1,1,prefix,Sweetpotato,Sweetpotato (Kanga)
+biriyan,unbranded,0.0061,1,1,inline,Biriyan,Prepit Hyderabad Biriyan 1 kg
+garnish,unbranded,0.0055,1,1,prefix,Garnish,Garnish Tray Plastic 9 Insert
+moti,unbranded,0.0054,1,1,prefix,Moti,MOTI ELAICHI
+magaj,unbranded,0.005,1,0,prefix,Magaj,Magaj Big
+sooji1kg,unbranded,0.005,1,1,suffix,SOOJI  1KG,RAJDHANI - SOOJI (1KG)
+hyderabad,unbranded,0.0048,1,1,inline,Hyderabad,Prepit Hyderabad Biriyan 1 kg
+phool,unbranded,0.0048,4,4,inline|prefix,Phool,Stone Flower(Dagad Phool)
+sbs,unbranded,0.0038,1,1,allcaps,SBS,Canteen Drink Box (250GSM) SBS
+date,unbranded,0.0035,1,1,prefix,Date,Date Label Sticker
+banditos,unbranded,0.0034,2,1,inline,Banditos,#_# Caramelo Banditos Sticker - Cookie Cartel
+sakura,unbranded,0.0032,2,2,prefix,Sakura,#_# Sakura Blossom Gateaux (125 Gms) - Ether
+air,unbranded,0.003,1,1,prefix,Air,Air Freshener Godrej
+dome,unbranded,0.0026,1,1,inline,Dome,#_# Pink Dome Box 1/2 Kg - Sassy Teaspoon
+mysore,unbranded,0.0025,1,1,prefix,Mysore,#_# Mysore Chutney Frozen - Murukku
+choice,unbranded,0.0022,1,1,inline,Choice,Cremica Chef Choice Mayo
+ultra,unbranded,0.002,1,1,inline,Ultra,Taski Suma Ultra (L2) 5L Can
+bhatti,unbranded,0.002,1,1,inline,Bhatti,#_# Tar Brush (Dosa Bhatti)
+mumbai,unbranded,0.0019,1,1,prefix,Mumbai,MUMBAI RAVA 5 KG
+fees,unbranded,0.0018,1,1,prefix,Fees,Fees for plumber
+tiger,unbranded,0.0018,1,0,inline,Tiger,Salt Black Tiger
+elephant,unbranded,0.0017,1,1,prefix,Elephant,Elephant Yam
+panner,unbranded,0.0016,1,0,prefix,Panner,Panner Fresh 1 kg
+lal,unbranded,0.0015,2,2,allcaps|inline,LAL|Lal,BANARASI LAL PEDA-200 Gms
+san,unbranded,0.0015,1,1,prefix,San,San Marzano - Pomace Olive Oil
+boba,unbranded,0.0012,1,1,prefix,Boba,Boba Lychee can
+rich,unbranded,0.0012,1,1,prefix,Rich,Rich Whipping Cream Gold
+super,unbranded,0.0012,1,1,inline,Super,Walnut whole Super (2 Pcs)
+tom,unbranded,0.0011,2,2,inline|prefix,Tom,Tom Kha Paste 1kg pkt
+kharata,unbranded,0.001,1,1,inline,Kharata,Floor Broom- Kharata
+unbranded,unbranded,0.0009,4,4,inline|prefix,Unbrand|Unbranded,Unbranded Spray Gun
+label,unbranded,0.0009,4,2,inline,Label,Tea Powder   Red Label 1kg pkt
+wash,unbranded,0.0007,3,3,inline,Wash,Hand Wash 5 Ltr Can
+slide,unbranded,0.0007,3,2,prefix,Side|Slide|Slider,#_# Slide Tru Hamper Box OF 4 Outer - The Tiny Tub
+leaf,unbranded,0.0007,2,2,inline,Leaf,Gold Bark (Leaf)
+message,unbranded,0.0006,1,0,prefix,Message,Message Card
+tie,unbranded,0.0006,1,0,inline,Tie,200m Tie
+cook,unbranded,0.0006,1,1,prefix,Cook,COOK POT SS WITH LID 36*20  20LTR
+napkin,unbranded,0.0006,4,3,inline|prefix,Napkin|Napkins,PAPER NAPKIN - 12CM X12 CM - PLAIN - LOCAL - PKT
+misti,unbranded,0.0006,1,1,prefix,Misti,#_# Misti Doi 100gm - Parsi Dairy Farm
+silken,unbranded,0.0005,1,1,prefix,Silken,Silken Tofu 300g Voila
+cotton,unbranded,0.0005,3,3,prefix,Cotton,Cotton BBK Apron
+chonak,unbranded,0.0005,1,0,prefix,Chonak,Chonak
+stamp,unbranded,0.0005,1,1,prefix,Stamp,Stamp Pad Medium Blue
+tab,unbranded,0.0004,1,1,inline,Tab,SUMA TAB CHLORINE
+greensmall,unbranded,0.0004,1,1,inline,Greensmall,UH ZUCCHINI GREENSMALL DICE1 KG / BAG
+perfect,unbranded,0.0004,1,1,prefix,Perfect,PERFECT NO-BAKE CHEESECAKE MIX (1KG)
+check,unbranded,0.0004,1,1,inline,Check,Duster Check/Hand
+panini,unbranded,0.0004,1,1,prefix,Panini,Panini Bread Outer Sticker (CBTL)
+stone,unbranded,0.0003,1,1,prefix,Stone,Stone Flower(Dagad Phool)
+theli,unbranded,0.0003,1,1,inline,Theli,Plastic Packing Theli (PP)
+texmex,unbranded,0.0003,1,0,prefix,Texmex,Texmex cheese sauce
+pet,unbranded,0.0003,5,3,inline|prefix,Pet,N_4  Pet Jar Lid
+chocopaste,unbranded,0.0003,1,1,inline,Chocopaste,GK-Morde - Hazelnut Chocopaste 1 Kg 140027
+malta,unbranded,0.0003,1,1,inline,Malta,Orange/Malta
+wrapper,unbranded,0.0003,1,1,prefix,Wrapper,Wrapper Yellow (12x12) for FLYP
+billing,unbranded,0.0003,2,2,inline,Billing,Thermal Paper Roll   Billing
+scissor,unbranded,0.0003,1,0,prefix,Scissor,#_# Scissor
+laddle,unbranded,0.0003,1,1,prefix,Laddle,Laddle Chinese with wooden handle 4 inch
+greeting,unbranded,0.0002,1,1,prefix,Greeting,#_# Greeting Card - Sassy Teaspoon
+kesar,unbranded,0.0002,6,5,inline|prefix,Kesar|Kesari|Kessar,KESAR
+carry,unbranded,0.0002,3,1,inline|prefix,Carry,CARRY BAG 500GM
+stapler,unbranded,0.0002,1,0,prefix,Stapler,#_# Stapler
+chiplet,unbranded,0.0002,1,1,inline,Chiplet,Butter Chiplet
+tawa,unbranded,0.0001,1,1,prefix,Tawa,Tawa Roti (7 inch)
+colour,unbranded,0.0001,6,4,inline|prefix,Color|Colour|Colours,COLOUR CODE DOTT TUES
+fssai,unbranded,0.0001,1,1,inline,Fssai,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+machine,unbranded,0.0001,1,1,inline,Machine,Good Night Machine
+blanco,unbranded,0.0001,2,2,inline,Blanc|Blanco,Teqila Blanco Don Angel 750 Ml
+duet,unbranded,0.0001,1,1,inline,Duet,Flow Wrap Rolls - Raspberry Duet (60 ml)
+passion,unbranded,0.0001,2,2,allcaps|inline,PASSION|Passion,PASSION FRUIT SYRUP(1 LTR) Foodoo
+capsicumwhole,unbranded,0.0001,1,1,inline,Capsicumwhole,UH GREEN CAPSICUMWHOLE CLEANEDCRATE
+spinach,unbranded,0.0001,3,1,prefix|suffix,Spinach|Spincach,Palak - Spinach
+rocky,unbranded,0.0001,1,1,prefix,Rocky,#_# Rocky Road Ice-cream Tub (100ml) - Meemees
+virgin,unbranded,0.0001,1,1,inline,Virgin,Garbage Bag Big 30X50 Virgin
+rare,unbranded,0.0001,1,0,inline,Rare,J and B Rare
+pla,unbranded,0.0001,1,1,allcaps,PLA,Fork PLA 160 mm
+gulab,unbranded,0.0001,1,1,prefix,Gulab,Gulab Jamun (Wyn)
+makana,unbranded,0.0001,2,1,inline|prefix,Makana|Makhana,Phool Makana
+drumsticks,unbranded,0.0001,2,2,inline,Drumstick|Drumsticks,Sargvo-Drumsticks
+pili,unbranded,0.0001,1,1,prefix,Pili,Pili mirch powder / yellow chilli powder
+copier,unbranded,0.0001,1,0,inline,Copier,JK Copier A4 Paper
+makeup,unbranded,0.0001,1,1,inline,Makeup,TL Hitachi UX Makeup 800ml
+cavity,unbranded,0.0001,1,1,prefix,Cavity,Cavity for corrugated box 720ml
+piri,unbranded,0.0001,2,2,inline|prefix,Piri,Chefs Art - Piri Piri Sprinkler 250 gm 51189
+saffron,unbranded,0.0001,1,1,prefix,Saffron,Saffron Kessar
+new,unbranded,0.0001,1,1,inline,New,Grated mozzarella New Onesta
+hearts,unbranded,0.0001,1,1,inline,Hearts,FRENCH HEARTS VINYL STICKER SET
+natural,unbranded,0.0001,1,1,prefix,Natural,Natural Mineral Water Aava 500 ml
+order,unbranded,0.0001,1,1,inline,Order,SS Round Plate 10 Inch- Order Plate
+byadagi,unbranded,0.0001,1,1,inline,Byadagi,Chilly Byadagi
+inc,unbranded,0.0001,1,1,inline,Inc,Polyester Label Sticker (4x2 Inc Red) Non veg
+yum,unbranded,0.0001,1,1,inline,Yum,#_# Sticker - Sauce Dip Sticker Tangy Thai Tom Yum Sauce - Prasuma
+baby,unbranded,0.0001,1,1,prefix,Baby,Baby Rawas
+essence,unbranded,0.0001,1,1,inline,Essence,Plum Essence
+naga,unbranded,0.0001,1,1,prefix,Naga,#_# Naga Chilli Sauce - Prasuma
+peda,unbranded,0.0,3,2,allcaps|inline,PEDA|Peda,BANARASI LAL PEDA-200 Gms
+kulambu,unbranded,0.0,2,2,inline,Kulambu,"Sakthi - Kulambu Chilli powder, 500gm"
+cumin,unbranded,0.0,4,2,inline|prefix,Cumin,EASTMADE - CUMIN (JEERA) 1 KG
+jeera,unbranded,0.0,3,3,inline|prefix,Jeera,EASTMADE - CUMIN (JEERA) 1 KG
+cut,unbranded,0.0,2,1,inline,Cut,Chicken Curry Cut
+sabudana,unbranded,0.0,2,2,inline|prefix,Sabudana,SABUDANA NYLON
+nylon,unbranded,0.0,2,2,inline,Nylon,SABUDANA NYLON
+roti,unbranded,0.0,2,2,inline,Rosti|Roti,Tawa Roti (7 inch)
+kashmiri,unbranded,0.0,5,2,inline|prefix,Kashmir|Kashmiri,Kashmiri Mirch Powder
+mirch,unbranded,0.0,5,4,inline,Mirch|Mirchi,Kashmiri Mirch Powder
+barcode,unbranded,0.0,1,1,inline,Barcode,ROW - Barcode Lable 50mmX25mm Non Tearable
+lable,unbranded,0.0,1,1,inline,Lable,ROW - Barcode Lable 50mmX25mm Non Tearable
+tearable,unbranded,0.0,1,1,inline,Tearable,ROW - Barcode Lable 50mmX25mm Non Tearable
+tofu,unbranded,0.0,1,1,inline,Tofu,Silken Tofu 300g Voila
+shirt,unbranded,0.0,3,1,inline|prefix,Shirt,T Shirt Black NM M38
+crispy,unbranded,0.0,4,4,inline|prefix,Crispy,Crispy Cajun Breading Mix
+cajun,unbranded,0.0,2,2,inline,Cajun,Crispy Cajun Breading Mix
+breading,unbranded,0.0,2,2,inline,Breading,Crispy Cajun Breading Mix
+eggs,unbranded,0.0,1,0,prefix,Eggs,Eggs
+set,unbranded,0.0,2,2,inline,Set,Cutlery Set The Cake Story
+storage,unbranded,0.0,2,1,inline,Storage,Plastic Storage Container 500ml
+ketchup,unbranded,0.0,1,0,prefix,Ketchup,Ketchup
+pkg,unbranded,0.0,2,1,inline,Pkg,GK-NY Pan Cake Sp Pkg Box 1PKT 100PC GK Dry 137497
+korean,unbranded,0.0,2,1,prefix,Korean,Korean LTO Menu
+menu,unbranded,0.0,1,1,inline,Menu,Korean LTO Menu
+malaysian,unbranded,0.0,1,1,prefix,Malaysian,Malaysian Noodles ( Flat Noodles ) 1kg
+noodles,unbranded,0.0,4,4,inline|prefix,Noodle|Noodles,Malaysian Noodles ( Flat Noodles ) 1kg
+flat,unbranded,0.0,3,3,inline,Flat|Flats,Malaysian Noodles ( Flat Noodles ) 1kg
+note,unbranded,0.0,4,4,inline|prefix,Note,Note Pad 3x3
+pad,unbranded,0.0,3,3,inline,Pad,Note Pad 3x3
+degreaser,unbranded,0.0,1,1,inline,Degreaser,Sumabrite Degreaser nd Heavy duty cleaner (break up HD)
+heavy,unbranded,0.0,3,3,inline,Heavy,Sumabrite Degreaser nd Heavy duty cleaner (break up HD)
+masoor,unbranded,0.0,3,2,inline|prefix,Masoor,Red Malka (Lal Masoor) Rajdhani
+silver,unbranded,0.0,4,1,inline|prefix,Silver,Silver Pouch 6*8
+khoya,unbranded,0.0,1,1,inline,Khoya,Shudh Garhwal - Khoya Pindi 1KG
+pindi,unbranded,0.0,1,1,inline,Pindi,Shudh Garhwal - Khoya Pindi 1KG
+fudge,unbranded,0.0,1,1,inline,Fudge,#_# Chocolate Fudge Overload (NAS) 500 ml - Frozen Fun
+overload,unbranded,0.0,1,1,inline,Overload,#_# Chocolate Fudge Overload (NAS) 500 ml - Frozen Fun
+code,unbranded,0.0,1,1,inline,Code,COLOUR CODE DOTT TUES
+cold,unbranded,0.0,1,1,inline,Cold,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+filter,unbranded,0.0,2,1,inline|prefix,Filter,STICKERS WVF COLD VARAVRAGE - THINK ORIGINS HAZELNUT COLD FILTER COFFEE FSSAI
+dalchini,unbranded,0.0,2,1,inline|prefix,Dalchini,Dalchini
+flower,unbranded,0.0,1,1,inline,Flower,Stone Flower(Dagad Phool)
+dagad,unbranded,0.0,1,1,inline,Dagad,Stone Flower(Dagad Phool)
+sambal,unbranded,0.0,1,1,prefix,Sambal,Sambal Oelek
+oelek,unbranded,0.0,1,1,inline,Oelek,Sambal Oelek
+tandoori,unbranded,0.0,5,2,inline|prefix,Tandoori,Tandoori paneer tikka
+medium,unbranded,0.0,2,2,inline,Medium,Cocoa powder (Medium Brown) Vanhouten
+brown,unbranded,0.0,10,8,inline|prefix,Brown,Cocoa powder (Medium Brown) Vanhouten
+fondant,unbranded,0.0,2,1,inline,Fondant,Brown Sugar Paste Fondant
+butter,unbranded,0.0,13,10,inline|prefix,Butter,Butter Pouch 9X12
+carrots,unbranded,0.0,2,2,prefix,Carrot|Carrots,"Carrots/Gajar, incremental 0.5 10335"
+gajar,unbranded,0.0,1,1,inline,Gajar,"Carrots/Gajar, incremental 0.5 10335"
+biryani,unbranded,0.0,5,5,inline|prefix,Biryani,Biryani Handi 750 GM
+tomato,unbranded,0.0,5,4,inline|prefix,Tomato,Green Tomato 1kg
+envelope,unbranded,0.0,2,0,inline|prefix,Envelope,Envelope
+compound,unbranded,0.0,3,2,inline,Compound,MF White Compound CO W33
+cabbage,unbranded,0.0,4,3,inline,Cabbage,Kobij-Cabbage
+garbage,unbranded,0.0,7,2,allcaps|prefix,GARBAGE|Garbage,Garbage Bag Black 30 x50
+orange,unbranded,0.0,7,7,inline|prefix,Orange,#_# FC - Orange Popsicle Ice Cream [70 Ml] - Noto
+kit,unbranded,0.0,2,2,inline|prefix,Kit,Kit Kat
+beer,unbranded,0.0,2,2,inline|prefix,Beer,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+alcoholic,unbranded,0.0,1,1,inline,Alcoholic,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+ginger,unbranded,0.0,4,4,inline,Ginger,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+flavour,unbranded,0.0,2,2,inline,Flavour|Flavoured,Beer Non Alcoholic 330 ml - Coolberg (Ginger Flavour)
+digestive,unbranded,0.0,1,1,prefix,Digestive,DIGESTIVE BISCUITS
+biscuits,unbranded,0.0,3,3,inline,Biscuit|Biscuits,DIGESTIVE BISCUITS
+mould,unbranded,0.0,1,1,inline,Mould,SS Mould Round Cutter - 12pcs
+cutter,unbranded,0.0,2,2,inline,Cutter,SS Mould Round Cutter - 12pcs
+amla,unbranded,0.0,3,3,inline|prefix,Amla,Dollur Amla Jar
+asafoetida,unbranded,0.0,1,1,prefix,Asafoetida,#_# Asafoetida / Hing - murukku
+hing,unbranded,0.0,3,2,inline|prefix,Hing,#_# Asafoetida / Hing - murukku
+kali,unbranded,0.0,3,3,inline|prefix,Kali|Katli,3 EASTMADE - BLACK PAPER WHOLE (KALI MIRCH)
+malai,unbranded,0.0,1,1,prefix,Malai,Malai Paneer Soft Loose
+soft,unbranded,0.0,2,2,inline,Soft,Malai Paneer Soft Loose
+loose,unbranded,0.0,2,1,inline,Loose,Malai Paneer Soft Loose
+steamer,unbranded,0.0,1,1,inline,Steamer,Momo Steamer
+dosa,unbranded,0.0,8,6,inline|prefix,Dosa,Dosa Masala Retort
+retort,unbranded,0.0,1,1,inline,Retort,Dosa Masala Retort
+potassium,unbranded,0.0,1,1,prefix,Potassium,Potassium Sorbate
+sorbate,unbranded,0.0,1,1,inline,Sorbate,Potassium Sorbate
+sabut,unbranded,0.0,1,1,inline,Sabut,Amla Sabut Herble
+peri,unbranded,0.0,4,2,inline,Peri,VKL PERI PERI MARINADE
+marinade,unbranded,0.0,3,2,inline,Marinade,VKL PERI PERI MARINADE
+radish,unbranded,0.0,3,0,inline|prefix,Raddish|Radish,Radish White
+chlorine,unbranded,0.0,2,1,inline|prefix,Chlorin|Chlorine,SUMA TAB CHLORINE
+pumpkin,unbranded,0.0,1,0,allcaps,PUMPKIN,PUMPKIN SEEDS (1Kg Pkt)
+zucchini,unbranded,0.0,2,1,inline|prefix,Zucchini,Zucchini Yellow (Premium)  incremental 0.5 10033
+dhania,unbranded,0.0,3,3,inline|prefix,Dhania|Dhaniya,Dhania Pudina Chutney-SNACC
+pudina,unbranded,0.0,1,1,inline,Pudina,Dhania Pudina Chutney-SNACC
+onion,unbranded,0.0,5,4,inline|prefix,Onion,Brown Onion
+lettuce,unbranded,0.0,2,2,prefix,Lettuce,Lettuce Patta
+patta,unbranded,0.0,3,1,inline,Patta,Lettuce Patta
+wooden,unbranded,0.0,5,4,allcaps|inline|prefix,WOODEN|Wooden,Wooden Cutlery Kit
+serve,unbranded,0.0,1,1,inline,Serve,Biryani small Box (Serve -1)
+flexible,unbranded,0.0,1,1,prefix,Flexible,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+bags,unbranded,0.0,3,3,inline,Bags,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+size,unbranded,0.0,5,4,inline|prefix|suffix,M size|Size,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+mithai,unbranded,0.0,1,1,inline,Mithai,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+namkeen,unbranded,0.0,1,1,inline,Namkeen,Flexible Plastic Bags ( 5kg Small Size - Mithai & Namkeen)
+kabab,unbranded,0.0,1,1,inline,Kabab,STICKER SHEEK KABAB
+cling,unbranded,0.0,1,1,prefix,Cling,Cling Film
+film,unbranded,0.0,2,2,inline,Film,Cling Film
+kale,unbranded,0.0,1,0,prefix,Kale,Kale
+aam,unbranded,0.0,1,1,inline,Aam,#_# BC - Aam Ice Cream [300ML] - BICO
+bopp,unbranded,0.0,1,0,inline,Bopp,340 MM BOPP ROLL
+ply,unbranded,0.0,1,1,inline,Ply,3 Ply Corrugated Croissant Tray
+corrugated,unbranded,0.0,2,1,inline|prefix,Corrugated,3 Ply Corrugated Croissant Tray
+croissant,unbranded,0.0,3,3,inline,Croissant,3 Ply Corrugated Croissant Tray
+kundru,unbranded,0.0,1,0,prefix,Kundru,Kundru
+spray,unbranded,0.0,4,4,inline|prefix,Spray,Unbranded Spray Gun
+gun,unbranded,0.0,1,1,inline,Gun,Unbranded Spray Gun
+sparkling,unbranded,0.0,1,0,prefix,Sparkling,Sparkling Water
+hot,unbranded,0.0,4,3,inline|prefix,Hot,Griffith Hot Chilli Marinade
+kung,unbranded,0.0,1,1,prefix,Kung,Kung Pao Sauce 335 G
+pao,unbranded,0.0,1,1,inline,Pao,Kung Pao Sauce 335 G
+packing,unbranded,0.0,4,3,inline|prefix,Packing,Plastic Packing Theli (PP)
+whitener,unbranded,0.0,1,1,inline,Whitener,EVD DAIRY WHITENER 1 KG
+sliced,unbranded,0.0,3,1,inline,Slice|Sliced,Red Paprika Sliced
+commercial,unbranded,0.0,1,1,inline,Commercial,19 KG Commercial Cylinder
+cylinder,unbranded,0.0,1,1,inline,Cylinder,19 KG Commercial Cylinder
+chakki,unbranded,0.0,1,1,inline,Chakki,VIKRAM - CHAKKI ATTA 30 KG
+eggless,unbranded,0.0,4,4,inline|prefix,Eggless,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+lava,unbranded,0.0,2,1,inline|prefix,Lava,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+ambient,unbranded,0.0,1,1,inline,Ambient,Infinite - Eggless Choco Lava Cake Premix 1 Kg Ambient 148873
+fried,unbranded,0.0,1,1,prefix,Fried,Fried Mirchi retort
+dried,unbranded,0.0,4,4,inline|prefix,Dried,Dried figs
+dark,unbranded,0.0,7,6,inline|prefix,Dark,#_# SIERRA 72% Dark Chocolate Bar - Ether
+gloves,unbranded,0.0,4,3,inline|prefix,Gloves,GLOVES BLUE
+slab,unbranded,0.0,1,1,inline,Slab,Milk Compound Slab M21
+quinoa,unbranded,0.0,2,0,prefix,Quinoa,Quinoa 1kg
+grill,unbranded,0.0,1,1,inline,Grill,A-005 Grill and Oven Cleaner ACTON
+oven,unbranded,0.0,2,2,inline,Oven,A-005 Grill and Oven Cleaner ACTON
+cleaner,unbranded,0.0,4,4,inline,Cleaner,A-005 Grill and Oven Cleaner ACTON
+wrap,unbranded,0.0,1,1,inline,Wrap,Flow Wrap Rolls - Raspberry Duet (60 ml)
+rolls,unbranded,0.0,3,3,inline,Rolls,Flow Wrap Rolls - Raspberry Duet (60 ml)
+raspberry,unbranded,0.0,5,3,inline|prefix,Raspberry,Flow Wrap Rolls - Raspberry Duet (60 ml)
+gooseberry,unbranded,0.0,1,1,inline,Gooseberry,Dry Amla-Dry Gooseberry
+pineapple,unbranded,0.0,1,1,inline,Pineapple,Real Pineapple Juice
+lids,unbranded,0.0,2,0,inline,Lids,PG-Paper Tub Lids
+polycarbonate,unbranded,0.0,2,1,inline,Polycarbonate,Cambro Polycarbonate GN Pan 1/2 200mm
+x1kg,unbranded,0.0,1,1,allcaps,X1KG,Mangoes (Sindhura) X1KG
+mangoes,unbranded,0.0,1,1,prefix,Mangoes,Mangoes (Sindhura) X1KG
+sindhura,unbranded,0.0,1,1,inline,Sindhura,Mangoes (Sindhura) X1KG
+egg,unbranded,0.0,2,1,inline|prefix,Egg,Premix Egg Free Chocolate Make: pillsbury
+free,unbranded,0.0,7,6,inline,Free,Premix Egg Free Chocolate Make: pillsbury
+make,unbranded,0.0,1,1,inline,Make,Premix Egg Free Chocolate Make: pillsbury
+berry,unbranded,0.0,3,2,inline,Berry,Blue Berry 250Gs
+mustard,unbranded,0.0,6,4,inline|prefix,Mustard,Active X Mustard Oil 500mL
+printer,unbranded,0.0,1,0,prefix,Printer,PRINTER ROLL
+chip,unbranded,0.0,3,3,inline,Chip,#_# Frozen OG Chocolate Chip Chonker - Chonkers
+grm,unbranded,0.0,1,1,inline,Grm,Burata Cheese 250 Grm
+tape,unbranded,0.0,6,4,inline|prefix,Tape,CELLO TAPE BIG PLAIN 3 INCH
+inch,unbranded,0.0,7,6,inline,Inch,CELLO TAPE BIG PLAIN 3 INCH
+kalakand,unbranded,0.0,1,0,inline,Kalakand,Sweets Milk Kalakand
+hakka,unbranded,0.0,1,1,inline,Hakka,#_# PMK Veg Hakka Noodles 250gm - Prasuma
+minis,unbranded,0.0,4,4,allcaps|inline|prefix,MINI|Mini|Minis,#_# Classic Vanilla Minis Sugar Free Ice cream [09 pieces] - Noto
+dip,unbranded,0.0,4,4,inline,Dip,PLASTIC DIP BOWL 50 ML
+bowl,unbranded,0.0,3,2,inline,Bowl,PLASTIC DIP BOWL 50 ML
+leeks,unbranded,0.0,1,0,prefix,Leeks,Leeks
+besan,unbranded,0.0,3,2,inline|prefix,Besan,BESAN
+sanitizer,unbranded,0.0,2,1,inline,Sanitizer,Hand Sanitizer
+basket,unbranded,0.0,1,0,inline,Basket,Cutlery Basket
+etc,unbranded,0.0,1,0,inline,Etc,PAPER CUP ( TEA WATER ETC)
+notebook,unbranded,0.0,2,2,inline|prefix,Notebook,NOTEBOOK LONG 200 PAGES
+long,unbranded,0.0,3,3,inline|prefix,Long,NOTEBOOK LONG 200 PAGES
+pages,unbranded,0.0,2,2,inline,Pages,NOTEBOOK LONG 200 PAGES
+ponni,unbranded,0.0,1,1,inline,Ponni,Rice Dosa (Ponni)
+pista,unbranded,0.0,3,1,inline|prefix,Pista|Pita,Dry Fruits Pista Whole
+hummus,unbranded,0.0,2,1,inline|prefix,Hummus,Hummus
+pomace,unbranded,0.0,2,2,inline,Pomace,San Marzano - Pomace Olive Oil
+olive,unbranded,0.0,4,3,inline|prefix,Olive|Olives,San Marzano - Pomace Olive Oil
+burst,unbranded,0.0,1,1,inline,Burst,Classic Ice Burst 10 Nos
+nos,unbranded,0.0,2,2,inline,Nos,Classic Ice Burst 10 Nos
+sleeve,unbranded,0.0,3,2,inline|prefix,Sleeve|Sleeves,Roll Sleeve Red
+sole,unbranded,0.0,1,1,inline,Sole,River Sole Fillet
+fillet,unbranded,0.0,2,2,inline,Fillet|Fillets,River Sole Fillet
+apron,unbranded,0.0,1,1,inline,Apron,Cotton BBK Apron
+adrak,unbranded,0.0,1,1,prefix,Adrak,Adrak / Ginger
+cacao,unbranded,0.0,1,1,prefix,Cacao,#_# Cacao Crispy - Ether
+saver,unbranded,0.0,1,0,inline,Saver,Cake Saver
+full,unbranded,0.0,4,0,inline|prefix,Full,Milk ( Full Cream )
+hair,unbranded,0.0,1,1,prefix,Hair,Hair Net
+net,unbranded,0.0,1,1,inline,Net,Hair Net
+almond,unbranded,0.0,4,4,inline|prefix,Almond,Almond biscotti (1pcs)
+makhani,unbranded,0.0,1,0,inline,Makhani,DAL MAKHANI STICKERS
+button,unbranded,0.0,2,2,inline,Button,Mini Button Bhakarwadi
+bhakarwadi,unbranded,0.0,1,1,inline,Bhakarwadi,Mini Button Bhakarwadi
+thai,unbranded,0.0,5,3,inline|prefix,Thai,Thai Jasmine Rice 2kg pkt MBK
+jasmine,unbranded,0.0,2,1,inline,Jasmine,Thai Jasmine Rice 2kg pkt MBK
+thick,unbranded,0.0,2,2,inline,Thick,Plastic Packing Cover Thick   12*16
+keto,unbranded,0.0,1,1,prefix,Keto,Keto Blueberry Cheesecake Ice Cream - 100 ml RM
+cheesecake,unbranded,0.0,5,3,inline,Cheesecake,Keto Blueberry Cheesecake Ice Cream - 100 ml RM
+pesto,unbranded,0.0,2,2,prefix,Pesto,Pesto Pistachio 2.5kg (Mec3-14755)
+pistachio,unbranded,0.0,3,3,inline,Pistachio,Pesto Pistachio 2.5kg (Mec3-14755)
+makki,unbranded,0.0,1,0,prefix,Makki,MAKKI ATTA
+chest,unbranded,0.0,1,1,prefix,Chest,Chest Freezer Capacity - 500 Ltr - 1060*700*840
+freezer,unbranded,0.0,1,1,inline,Freezer,Chest Freezer Capacity - 500 Ltr - 1060*700*840
+capacity,unbranded,0.0,1,1,inline,Capacity,Chest Freezer Capacity - 500 Ltr - 1060*700*840
+gherkin,unbranded,0.0,2,1,prefix,Gherkin,Gherkin
+cayenne,unbranded,0.0,1,1,prefix,Cayenne,Cayenne Pepper Powder
+pepper,unbranded,0.0,4,3,inline,Pepper,Cayenne Pepper Powder
+palak,unbranded,0.0,2,1,prefix,Palak,Palak - Spinach
+farali,unbranded,0.0,2,2,prefix,Farali,Farali Sabudana Vada
+vada,unbranded,0.0,1,1,inline,Vada,Farali Sabudana Vada
+taro,unbranded,0.0,1,1,inline,Taro,Possmei Taro Powder Premix 1kg pkt
+time,unbranded,0.0,1,1,inline,Time,EGGFREE TEA TIME VANILLA MUFFIN
+muffin,unbranded,0.0,1,1,inline,Muffin,EGGFREE TEA TIME VANILLA MUFFIN
+potato,unbranded,0.0,3,3,inline|prefix,Potato,Windmill Potato starch
+kulfi,unbranded,0.0,4,3,inline|prefix,Kulfi,#_# Mango Kulfi 300gm - Parsi Dairy Farm
+coriander,unbranded,0.0,2,1,prefix,Coriander,Coriander Fresh W/O Roots
+roots,unbranded,0.0,1,1,inline,Roots,Coriander Fresh W/O Roots
+wheat,unbranded,0.0,3,3,inline,Wheat,Whole Wheat Jumbo Bread
+jumbo,unbranded,0.0,1,1,inline,Jumbo,Whole Wheat Jumbo Bread
+stick,unbranded,0.0,2,2,inline,Stick,#_# Pista Kulfi Stick (70 ml) - Go Zero
+road,unbranded,0.0,1,1,inline,Road,#_# Rocky Road Ice-cream Tub (100ml) - Meemees
+cocktail,unbranded,0.0,1,0,inline,Cocktail,Fruit Cocktail Tin
+sesame,unbranded,0.0,2,0,prefix,Sesame,Sesame Oil 650 Ml
+rub,unbranded,0.0,1,1,inline,Rub,Hand Rub
+hydrochloric,unbranded,0.0,1,1,prefix,Hydrochloric,Hydrochloric Acid
+acid,unbranded,0.0,2,2,inline,Acid,Hydrochloric Acid
+artichoke,unbranded,0.0,1,1,prefix,Artichoke,Artichoke Tin 390 Grms
+grms,unbranded,0.0,1,1,inline,Grms,Artichoke Tin 390 Grms
+turmeric,unbranded,0.0,2,2,prefix,Turmeric,Turmeric (Haldi) Powder Chounk
+haldi,unbranded,0.0,2,1,inline|prefix,Haldi,Turmeric (Haldi) Powder Chounk
+rubber,unbranded,0.0,1,1,inline,Rubber,Scotch Brite - Rubber Kitchen Gloves
+couverture,unbranded,0.0,1,1,inline,Couverture,Dark Couverture 54%
+cinnamon,unbranded,0.0,2,1,prefix,Cinnamon,CINNAMON 1 KG
+unsalted,unbranded,0.0,1,1,inline,Unsalted,President Butter Unsalted 500gm
+regular,unbranded,0.0,2,1,inline,Regular,Olive Oil (Regular /Pomace )
+chocochip,unbranded,0.0,1,0,inline,Chocochip,Milk Chocochip
+lemon,unbranded,0.0,6,6,inline|prefix,Lemon,Lemon Ginger Syrup
+urinal,unbranded,0.0,1,1,prefix,Urinal,Urinal Pad
+heeng,unbranded,0.0,1,1,prefix,Heeng,Heeng Papdi 200g
+papdi,unbranded,0.0,1,1,inline,Papdi,Heeng Papdi 200g
+millets,unbranded,0.0,2,2,inline|prefix,Millet|Millets,DAILY FRESH MILLETS IDLI AND DOSA BATTER POUCH 1/2KG
+idli,unbranded,0.0,1,1,inline,Idli,DAILY FRESH MILLETS IDLI AND DOSA BATTER POUCH 1/2KG
+batter,unbranded,0.0,4,3,inline,Batter,DAILY FRESH MILLETS IDLI AND DOSA BATTER POUCH 1/2KG
+puree,unbranded,0.0,2,1,inline,Pure|Puree,MANGO PUREE
+capsicum,unbranded,0.0,2,0,allcaps|inline|prefix,CAPSICUM|Capsicum,Red Yellow Capsicum Mixed
+kabuli,unbranded,0.0,1,1,prefix,Kabuli,Kabuli Channa
+channa,unbranded,0.0,1,1,inline,Channa,Kabuli Channa
+tahina,unbranded,0.0,1,0,prefix,Tahina,Tahina Paste
+haleem,unbranded,0.0,1,0,inline,Haleem,Sticker Mutton Haleem
+raw,unbranded,0.0,3,3,inline|prefix,Raw,Raw Banana- Nos
+banana,unbranded,0.0,1,1,inline,Banana,Raw Banana- Nos
+disposal,unbranded,0.0,2,1,prefix,Disposable|Disposal,Disposal Cap (Pkt)
+flakes,unbranded,0.0,1,1,inline,Flakes,Potato Flakes 1kg pkt
+seasoning,unbranded,0.0,6,6,inline,Seasoning,Maggi Seasoning Sauce 680Ml
+chillies,unbranded,0.0,1,0,inline,Chillies,Green Chillies
+base,unbranded,0.0,3,2,allcaps|inline,BASE|Base,Pizza Base 8 inch Whole Wheat Pan Crust (Junos)
+crust,unbranded,0.0,1,1,inline,Crust,Pizza Base 8 inch Whole Wheat Pan Crust (Junos)
+subji,unbranded,0.0,1,0,inline,Subji,Staff Subji
+brinjal,unbranded,0.0,1,0,prefix,Brinjal,Brinjal   Black
+velvet,unbranded,0.0,3,3,inline,Velvet,#_# Griselda's Red Velvet Sticker (Eggless) - Cookie Cartel
+leg,unbranded,0.0,1,1,inline,Leg,CHICKEN LEG RAW
+blossom,unbranded,0.0,1,1,inline,Blossom,#_# Sakura Blossom Gateaux (125 Gms) - Ether
+gateaux,unbranded,0.0,1,1,inline,Gateaux,#_# Sakura Blossom Gateaux (125 Gms) - Ether
+slicer,unbranded,0.0,1,1,inline,Slicer,TL Slicer Cutter
+fine,unbranded,0.0,2,2,inline|prefix,Fine,Fine Sev
+sev,unbranded,0.0,1,1,inline,Sev,Fine Sev
+bottles,unbranded,0.0,2,2,inline,Bottles,R.O Water Bottles (20 Ltrs)
+ltrs,unbranded,0.0,1,1,inline,Ltrs,R.O Water Bottles (20 Ltrs)
+xylitol,unbranded,0.0,1,1,allcaps,XYLITOL,#_# XYLITOL Chocolate Hazelnut Icecream (600ML) - Bina
+beans,unbranded,0.0,4,2,inline,Beans,Moth / Math Atta - Flour - Moth Beans
+fork,unbranded,0.0,1,1,prefix,Fork,Fork PLA 160 mm
+dog,unbranded,0.0,1,1,inline,Dog,Hot Dog Bun 55g L 160mm X W 55mm
+ajinomato,unbranded,0.0,2,1,prefix,Ajinomato|Ajinomoto,Ajinomato
+bed,unbranded,0.0,1,0,prefix,Bed,Bed Sheet
+keema,unbranded,0.0,1,1,inline,Keema,CHICKEN KEEMA FOR SEEKH
+seekh,unbranded,0.0,1,1,inline,Seekh,CHICKEN KEEMA FOR SEEKH
+jamun,unbranded,0.0,2,2,allcaps|inline,JAMUN|Jamun,Gulab Jamun (Wyn)
+rasmalai,unbranded,0.0,1,0,inline,Rasmalai,Sweets Pcs. Rasmalai
+soaked,unbranded,0.0,1,1,prefix,Soaked,#_# Soaked Chia - The Whole Truth
+chia,unbranded,0.0,1,1,inline,Chia,#_# Soaked Chia - The Whole Truth
+assorted,unbranded,0.0,3,3,inline|prefix,Assorted,Food Colours Splash 200g Assorted
+melted,unbranded,0.0,2,2,inline,Melted,Milkhana Melted Cheese
+crunchy,unbranded,0.0,3,3,inline|prefix,Crunch|Crunchy,#_# Sticker - Sauce Dip Sticker Crunchy Chilli Oil - Prasuma
+starch,unbranded,0.0,2,2,inline,Starch,POTATO STARCH
+currant,unbranded,0.0,1,1,inline,Currant,MAPRO BLACK CURRANT 1 LTR
+holder,unbranded,0.0,1,0,inline,Holder,Paper Cup Holder
+brandy,unbranded,0.0,2,2,inline,Brand|Brandy,BARDINET BRANDY 1000 ML
+tender,unbranded,0.0,1,1,prefix,Tender,#_# Tender Coconut Litchi Ice Pop - Getaway
+litchi,unbranded,0.0,1,1,inline,Litchi,#_# Tender Coconut Litchi Ice Pop - Getaway
+pop,unbranded,0.0,2,2,inline,Pop,#_# Tender Coconut Litchi Ice Pop - Getaway
+number,unbranded,0.0,1,1,prefix,Number,Number Candles
+candles,unbranded,0.0,1,1,inline,Candles,Number Candles
+pickle,unbranded,0.0,5,3,inline|prefix,Pickle,Mixed Veg Pickle (5 kg)-Snacc
+cooking,unbranded,0.0,2,2,inline|prefix,Cooking,Cooking White Wine 750ml
+wine,unbranded,0.0,1,1,inline,Wine,Cooking White Wine 750ml
+oregano,unbranded,0.0,3,3,inline|prefix,Oregano,Oregano Herbs (Seasoning )
+herbs,unbranded,0.0,2,1,inline,Herb|Herbs,Oregano Herbs (Seasoning )
+moong,unbranded,0.0,3,2,inline|prefix,Moong,Yellow Moong dal
+lltr,unbranded,0.0,1,1,inline,Lltr,Orange Juice 1 Lltr
+sponge,unbranded,0.0,1,1,inline,Sponge,SCOTCH BRITE - SOFT SPONGE
+vinyl,unbranded,0.0,2,1,inline|prefix,Vinyl,Vinyl Sticker 2x1.5 Ft
+veggie,unbranded,0.0,1,1,prefix,Veggie,Veggie Pizza Pocket
+pocket,unbranded,0.0,1,1,inline,Pocket,Veggie Pizza Pocket
+soyabeen,unbranded,0.0,2,2,prefix,Soyabeen,Soyabeen Chunks-Soya Chunks
+chunks,unbranded,0.0,1,1,inline,Chunks,Soyabeen Chunks-Soya Chunks
+soya,unbranded,0.0,5,5,inline|prefix,Soya,Soyabeen Chunks-Soya Chunks
+sachet,unbranded,0.0,2,1,inline,Sachet,Pickle Sachet
+pot,unbranded,0.0,1,1,inline,Pot,COOK POT SS WITH LID 36*20  20LTR
+bake,unbranded,0.0,1,1,inline,Bake,PERFECT NO-BAKE CHEESECAKE MIX (1KG)
+coat,unbranded,0.0,1,1,inline,Coat,Chef Coat S36  Black Half Sleeve
+half,unbranded,0.0,3,3,inline,Half,Chef Coat S36  Black Half Sleeve
+filling,unbranded,0.0,2,2,inline,Filling,Fruit Filling Mango Delta
+sprinkle,unbranded,0.0,2,1,inline,Sprinkle|Sprinkler,Chocolate Sprinkle
+garlic,unbranded,0.0,2,1,prefix,Garlic,Garlic Bread Seasoning Powder
+diffuser,unbranded,0.0,1,1,inline,Diffuser,Aroma Diffuser Liquid
+greek,unbranded,0.0,1,1,inline,Greek,#_# Blueberry Greek Yogurt Minis Guilt Free Ice Cream [09 pieces] - Noto
+yogurt,unbranded,0.0,1,1,inline,Yogurt,#_# Blueberry Greek Yogurt Minis Guilt Free Ice Cream [09 pieces] - Noto
+guilt,unbranded,0.0,1,1,inline,Guilt,#_# Blueberry Greek Yogurt Minis Guilt Free Ice Cream [09 pieces] - Noto
+lychee,unbranded,0.0,2,1,inline|prefix,Lychee,Lychee Juice 1000 Ml
+clear,unbranded,0.0,1,1,inline,Clear,12OZ CLEAR PET CUPS
+cups,unbranded,0.0,2,2,inline,Cups,12OZ CLEAR PET CUPS
+burger,unbranded,0.0,3,1,allcaps|inline|prefix,BURGER|Burger,NON-VEG BURGER BUN (1x4)
+crispycajunbreadingmix1kgh51176,unbranded,0.0,1,1,suffix,Crispy Cajun Breading Mix 1 Kg H51176,Chef's Art - Crispy Cajun Breading Mix 1 Kg H51176
+h51176,unbranded,0.0,1,1,allcaps,H51176,Chef's Art - Crispy Cajun Breading Mix 1 Kg H51176
+skimmed,unbranded,0.0,1,1,prefix,Skimmed,Skimmed Milk Powder (SMP) (Milk Protein - 36 percent)
+smp,unbranded,0.0,1,1,allcaps,SMP,Skimmed Milk Powder (SMP) (Milk Protein - 36 percent)
+protein,unbranded,0.0,2,2,inline,Protein,Skimmed Milk Powder (SMP) (Milk Protein - 36 percent)
+brioche,unbranded,0.0,1,0,prefix,Brioche,Brioche Buns 70g D 100mm X H 45mm
+temper,unbranded,0.0,1,1,inline,Temper,#_# Mustard Seeds Temper/Tadka - Murukku
+tadka,unbranded,0.0,2,2,inline,Tadka,#_# Mustard Seeds Temper/Tadka - Murukku
+maraschino,unbranded,0.0,1,1,prefix,Maraschino,Maraschino Cherry 737 Gms
+cherry,unbranded,0.0,3,3,inline|prefix,Cherry,Maraschino Cherry 737 Gms
+grade,unbranded,0.0,2,2,inline,Grade,Jeera Whole Grade 1
+aata,unbranded,0.0,1,1,inline,Aata,Fortune Aata
+mayo,unbranded,0.0,2,2,inline,Mayo,Delmonte - Eggless Mayo
+duo,unbranded,0.0,1,1,inline,Duo,preethi xpro Duo mg-198 1300w
+chundakkai,unbranded,0.0,1,1,prefix,Chundakkai,CHUNDAKKAI VATHAL
+vathal,unbranded,0.0,1,1,inline,Vathal,CHUNDAKKAI VATHAL
+day,unbranded,0.0,1,1,inline,Day,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+double,unbranded,0.0,3,3,inline|prefix,Double,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+brownie,unbranded,0.0,2,2,inline,Brownie,Mother's Day Double Chocolate Brownie box - Blinkit / Instamart
+oat,unbranded,0.0,1,1,prefix,Oat,Oat Milk AltCo. 200 ml
+schezwan,unbranded,0.0,3,1,inline,Schezwan,Sauce-Schezwan
+tapioca,unbranded,0.0,1,1,prefix,Tapioca,Tapioca Starch 500g pkt
+ganaches,unbranded,0.0,2,1,inline,Ganache|Ganaches,#_# Box of 20 Assorted Ganaches - La Folie
+stem,unbranded,0.0,1,1,inline,Stem,Red Cherry with Stem 850g Tin
+cashewnuts,unbranded,0.0,2,0,prefix,Cashewnut|Cashewnuts,Cashewnuts
+waffle,unbranded,0.0,1,1,inline,Waffle,GK-Miami Waffle Pizza Pkg Box 1PKT 100PC GK Dry 137504
+cheddar,unbranded,0.0,1,1,prefix,Cheddar,Cheddar White Wyke 2.5 Kg
+mayonnaise,unbranded,0.0,1,0,inline,Mayonnaise,SAUCE MAYONNAISE
+stainless,unbranded,0.0,1,1,prefix,Stainless,Stainless Steel Scrub
+steel,unbranded,0.0,1,1,inline,Steel,Stainless Steel Scrub
+scrub,unbranded,0.0,1,1,inline,Scrub,Stainless Steel Scrub
+citric,unbranded,0.0,1,1,prefix,Citric,Citric Acid Monohydrate 500 GM
+monohydrate,unbranded,0.0,1,1,inline,Monohydrate,Citric Acid Monohydrate 500 GM
+basa,unbranded,0.0,2,1,inline|prefix,Basa,Basa Fish
+belgian,unbranded,0.0,1,1,inline,Belgian,Hoegaarden Belgian Blanche
+blanche,unbranded,0.0,1,1,inline,Blanche,Hoegaarden Belgian Blanche
+mrp,unbranded,0.0,1,0,inline,Mrp,Water Bottle Mrp 70
+protien,unbranded,0.0,1,1,inline,Protien,#_# Double Cocoa Protien Bar - The Whole Truth
+duster,unbranded,0.0,6,4,inline|prefix,Duster|Dusters,DUSTER YELLOW
+guava,unbranded,0.0,1,1,prefix,Guava,#_# Guava Pop (70 ML) - Noto
+fry,unbranded,0.0,1,1,inline,Fry,CHICKEN FRY MIXTURE (CF1)
+mixture,unbranded,0.0,1,1,inline,Mixture,CHICKEN FRY MIXTURE (CF1)
+broth,unbranded,0.0,1,1,inline,Broth,Chicken Broth Powder Knorr
+urad,unbranded,0.0,1,1,prefix,Urad,Urad Wash
+kha,unbranded,0.0,1,1,inline,Kha,Tom Kha Paste 1kg pkt
+sour,unbranded,0.0,1,0,prefix,Sour,SOUR DOUGH BREAD
+die,unbranded,0.0,1,0,inline,Die,95 Die lid
+sea,unbranded,0.0,1,1,inline,Sea,Frozen Sea Bass Fillets
+bass,unbranded,0.0,1,1,inline,Bass,Frozen Sea Bass Fillets
+spread,unbranded,0.0,1,1,inline,Spread,Amul Cheese Spread 200 Gm
+wings,unbranded,0.0,1,1,inline,Wings,Crispy Chicken Wings- Drums+Flats
+drums,unbranded,0.0,1,1,inline,Drums,Crispy Chicken Wings- Drums+Flats
+disposible,unbranded,0.0,1,1,prefix,Disposible,DISPOSIBLE GLOVES
+tikka,unbranded,0.0,3,3,inline,Tikka,Chicken Tikka Marinated
+marinated,unbranded,0.0,2,2,inline|suffix,Marinated,Chicken Tikka Marinated
+dhuli,unbranded,0.0,1,1,inline,Dhuli,MOONG DHULI DAL
+floor,unbranded,0.0,6,5,inline|prefix,Floor,Floor Broom- Kharata
+broom,unbranded,0.0,1,1,inline,Broom,Floor Broom- Kharata
+gravy,unbranded,0.0,1,1,inline,Gravy,Tomato ( For Gravy )
+popper,unbranded,0.0,1,1,inline,Popper,Party Popper 40 CM
+chilled,unbranded,0.0,2,2,inline|prefix,Chilled,Dosa Batter Chilled
+wipes,unbranded,0.0,3,2,inline,Wipe|Wipes,Wonder Wipes
+fungus,unbranded,0.0,1,0,inline,Fungus,Black Fungus
+cashew,unbranded,0.0,2,2,inline|prefix,Cashew,Cashew Half
+manchurian,unbranded,0.0,1,1,prefix,Manchurian,Manchurian Balls 500 Gms
+balls,unbranded,0.0,1,1,inline,Balls,Manchurian Balls 500 Gms
+valencia,unbranded,0.0,1,1,prefix,Valencia,Valencia Orange
+elastic,unbranded,0.0,1,1,prefix,Elastic,Elastic thread round black 1.1 MM
+javitri,unbranded,0.0,1,1,prefix,Javitri,Javitri (Mace)
+mace,unbranded,0.0,1,1,inline,Mace,Javitri (Mace)
+gas,unbranded,0.0,1,1,prefix,Gas,Gas Lighter
+lighter,unbranded,0.0,1,1,inline,Lighter,Gas Lighter
+mousse,unbranded,0.0,1,1,inline,Mousse,#_# Hazelnut Mousse Cake [500 gms] [Gluten Free] - Sassy Teaspoon
+thigh,unbranded,0.0,2,2,allcaps|inline,THIGH|Thigh,CHICKEN THIGH BONELESS (80 - 90 gm)
+boneless,unbranded,0.0,2,2,allcaps|inline,BONELESS|Boneless,CHICKEN THIGH BONELESS (80 - 90 gm)
+printed,unbranded,0.0,5,5,inline,Printed,Biryani Box Printed Round with Lid (1250 gm)
+basmati,unbranded,0.0,2,2,inline|prefix,Basmati,BASMATI BIRYANI RICE
+multi,unbranded,0.0,1,1,prefix,Multi,Multi Fold Tissue
+fold,unbranded,0.0,1,1,inline,Fold,Multi Fold Tissue
+tissue,unbranded,0.0,2,2,inline,Tissue,Multi Fold Tissue
+sundried,unbranded,0.0,1,1,prefix,Sundried,Sundried Tomatoes in oil
+tomatoes,unbranded,0.0,1,1,inline,Tomatoes,Sundried Tomatoes in oil
+bone,unbranded,0.0,1,1,inline,Bone,Chicken PCP (Bone)
+prawn,unbranded,0.0,2,1,inline|prefix,Prawn|Prawns,Nam Shop Sticker   Prawn Crackers Large
+crackers,unbranded,0.0,1,1,inline,Crackers,Nam Shop Sticker   Prawn Crackers Large
+idly,unbranded,0.0,2,1,prefix,Idly,IDLY POWDER
+iqf,unbranded,0.0,1,1,inline,Iqf,RASPBERRY IQF FROZEN
+mic,unbranded,0.0,1,1,inline,Mic,Plastic Film Pouch 7*10 80 Mic
+jamaican,unbranded,0.0,1,1,inline,Jamaican,Chefs Art - Jamaican Jerk Seasoning 400 gm
+jerk,unbranded,0.0,1,1,inline,Jerk,Chefs Art - Jamaican Jerk Seasoning 400 gm
+ada,unbranded,0.0,1,0,inline,Ada,RICE ADA
+paratha,unbranded,0.0,1,1,inline,Paratha,Tikona Paratha
+artesian,unbranded,0.0,1,1,inline,Artesian,Blue Pine Artesian Water - 750 ML - GST @18 %
+peas,unbranded,0.0,2,1,inline,Peas,Green Peas
+spring,unbranded,0.0,2,1,inline,Spring,Non Veg Spring Rolls -SNACC
+brain,unbranded,0.0,1,0,inline,Brain,MUTTON BRAIN 1PCS
+aluminium,unbranded,0.0,3,2,prefix,Aluminium,ALUMINIUM CONTAINER LID 750ML
+chaap,unbranded,0.0,1,1,inline,Chaap,SOYA CHAAP STUFFED SF
+stuffed,unbranded,0.0,1,1,inline,Stuffed,SOYA CHAAP STUFFED SF
+chini,unbranded,0.0,1,0,inline,Chini,Sugar (Chini)
+sandwich,unbranded,0.0,2,0,inline|prefix,Sandwich,SANDWICH BOX
+snacks,unbranded,0.0,1,1,inline,Snacks,TG-Party Snacks 35G Pouch
+peach,unbranded,0.0,3,2,inline,Each|Peach,Monin Peach flavour
+local,unbranded,0.0,1,1,inline,Local,PAPER NAPKIN - 12CM X12 CM - PLAIN - LOCAL - PKT
+book,unbranded,0.0,4,4,inline,Book,Note Book 240 Pages
+mushroom,unbranded,0.0,4,4,inline,Mushroom|Mushrooms,GFB Mushroom Patty
+patty,unbranded,0.0,1,1,inline,Patty,GFB Mushroom Patty
+mineral,unbranded,0.0,2,2,inline|prefix,Mineral,MINERAL WATER BOTTLE 1 LIT SF
+lit,unbranded,0.0,1,1,inline,Lit,MINERAL WATER BOTTLE 1 LIT SF
+kaffir,unbranded,0.0,2,1,prefix,Kaffir,KAFFIR LIME
+lime,unbranded,0.0,2,1,inline,Lime,KAFFIR LIME
+chestnut,unbranded,0.0,2,0,inline,Chestnut|Chestnuts,Water Chestnut In Water 567G
+mary,unbranded,0.0,1,0,inline,Mary,ROSE MARY
+matthi,unbranded,0.0,1,1,inline,Matthi,#_# Baked Oregano Cheese Matthi - Genda Phool
+salad,unbranded,0.0,2,0,inline|prefix,Salad,STICKER SALAD
+straw,unbranded,0.0,2,0,inline,Straw|Straws,Paper Straw
+grass,unbranded,0.0,1,1,inline,Grass,Lemon Grass (Green)
+coated,unbranded,0.0,2,2,inline,Coated,Chicken wings Coated ( ITC )
+vanaspati,unbranded,0.0,2,1,prefix,Vanaspati,Vanaspati 1kg pkt
+grapes,unbranded,0.0,1,0,inline,Grapes,Green Grapes
+breakfast,unbranded,0.0,2,1,prefix,Breakfast,Breakfast Sugar Trust 1 Kg
+glucose,unbranded,0.0,1,0,inline,Glucose,Liquid Glucose
+sooji,unbranded,0.0,2,2,inline,Sooji,RAJDHANI - SOOJI (1KG)
+leaves,unbranded,0.0,4,3,inline,Leave|Leaves,Lemon Leaves Fresh
+thermal,unbranded,0.0,1,1,prefix,Thermal,Thermal Paper Roll   Billing
+aampanna,unbranded,0.0,1,0,prefix,Aampanna,Aampanna juice 150ml
+toned,unbranded,0.0,1,1,prefix,Toned,Toned Tetra Milk 1000 ml
+chenin,unbranded,0.0,1,1,inline,Chenin,Grover Selecte Chenin Blanc 750 Ml
+tile,unbranded,0.0,1,1,inline,Tile,Quarry And Tile Floor Cleaner (120X2Oz)
+blend,unbranded,0.0,1,1,inline,Blend,#_# Cothas Blend Coffee 200 Gm - Murukku
+icing,unbranded,0.0,1,0,prefix,Icing,Icing Sugar Powder
+stirrer,unbranded,0.0,1,1,prefix,Stirrer,#_# Stirrer - Murukku
+batani,unbranded,0.0,1,1,inline,Batani,White Peas Batani
+chevdo,unbranded,0.0,1,1,inline,Chevdo,Farali Chevdo (Tikho)
+manager,unbranded,0.0,1,1,prefix,Manager,Manager Shirt Pink Size-S
+shot,unbranded,0.0,1,0,prefix,Shot,Shot Glass 60Ml
+meat,unbranded,0.0,2,2,inline|prefix,Meat,Meat Masala MDH
+toor,unbranded,0.0,1,1,inline,Toor,Economy - Staff Toor Dal 1 Kg (Non IP) 131965
+honey,unbranded,0.0,2,2,inline|prefix,Honey,Dabur Honey
+baguette,unbranded,0.0,1,1,prefix,Baguette,#_# Baguette Sourdough - La folie
+sourdough,unbranded,0.0,1,1,inline,Sourdough,#_# Baguette Sourdough - La folie
+paleo,unbranded,0.0,1,1,inline,Paleo,#_# Tag - Gluten-free Paleo Cookies - Le Four
+great,unbranded,0.0,1,1,inline,Great,#_# The Great Indian Toffee 300gm - Parsi Dairy Farm
+indian,unbranded,0.0,1,1,inline,Indian,#_# The Great Indian Toffee 300gm - Parsi Dairy Farm
+toffee,unbranded,0.0,2,2,inline,Toffee,#_# The Great Indian Toffee 300gm - Parsi Dairy Farm
+dustbin,unbranded,0.0,1,0,prefix,Dustbin,Dustbin Cover Small
+rava,unbranded,0.0,1,1,inline,Rava,MUMBAI RAVA 5 KG
+gochujang,unbranded,0.0,4,1,inline|prefix,Gochujang,Gochujang Sauce
+x50,unbranded,0.0,1,1,allcaps,X50,Garbage Bag Green 30 X50
+microgreen,unbranded,0.0,1,1,inline,Microgreen,Green Mustard Microgreen
+palm,unbranded,0.0,1,1,prefix,Palm,Palm Jaggery (per kg)
+jaggery,unbranded,0.0,1,1,inline,Jaggery,Palm Jaggery (per kg)
+evaporated,unbranded,0.0,1,1,inline,Evaporated,CARNATTION MILK  405 GM ( EVAPORATED MILK )
+chardonnay,unbranded,0.0,1,1,inline,Chardonnay,SDU Deva Chardonnay White wine 750ml
+grated,unbranded,0.0,1,1,prefix,Grated,Grated mozzarella New Onesta
+block,unbranded,0.0,1,1,inline,Block,Cheese Block Processed
+processed,unbranded,0.0,1,1,inline,Processed,Cheese Block Processed
+exempt,unbranded,0.0,1,1,inline,Exempt,Amul Fresh Cream 1 Ltr- Exempt
+squeeze,unbranded,0.0,1,1,prefix,Squeeze,Squeeze bottles -  Large
+vinegar,unbranded,0.0,1,1,prefix,Vinegar,VINEGAR SYNTHETIC 750ML
+synthetic,unbranded,0.0,1,1,inline,Synthetic,VINEGAR SYNTHETIC 750ML
+crumb,unbranded,0.0,2,1,inline,Crumb|Crumbs,Bread Crumb (Orange)
+lollypop,unbranded,0.0,1,0,inline,Lollypop,Chicken Lollypop Plate
+gram,unbranded,0.0,1,1,prefix,Gram,Gram Flour/Besan (Motichur)
+motichur,unbranded,0.0,2,2,inline|prefix,Motichur,Gram Flour/Besan (Motichur)
+galouti,unbranded,0.0,1,0,inline,Galouti,Chicken Galouti
+salted,unbranded,0.0,2,2,inline,Salted,#_# Baked Salted Caramel Cheesecake - Sassy Teaspoon
+hash,unbranded,0.0,1,1,inline,Hash,McCain Rosti Round/ Hash Brown 1.5kg
+pass,unbranded,0.0,1,1,inline,Pass,#_# Gate Pass Book
+dispenser,unbranded,0.0,1,1,inline,Dispenser,Tape Dispenser
+penne,unbranded,0.0,2,2,inline,Penne,Agnessi Penne Pasta
+pasta,unbranded,0.0,2,2,inline,Pasta,Agnessi Penne Pasta
+rajma,unbranded,0.0,1,1,inline,Rajma,Rasila Rajma - Outsource
+motichoor,unbranded,0.0,2,1,allcaps,MOTICHOOR,MOTICHOOR LADDU 250g
+laddu,unbranded,0.0,3,2,allcaps|inline,LADDU|Laddu,MOTICHOOR LADDU 250g
+sause,unbranded,0.0,1,1,inline,Sause,Kissan Tomato Sause Dip
+ragi,unbranded,0.0,1,0,prefix,Ragi,RAGI WHOLE
+xxl,unbranded,0.0,1,1,allcaps,XXL,Cotton pink plan shirt  (Size-XXL)
+top,unbranded,0.0,1,1,prefix,Top,TOP COVER OF BOX 750 ML SALADSPOINT
+customized,unbranded,0.0,1,1,inline,Customized,Disposable Paper Glass 150 ml Customized Printed Cups 180 GSM Paper
+lentils,unbranded,0.0,1,1,inline,Lentils,Dal Tadka Lentils- ( 920 gms )
+kakdi,unbranded,0.0,1,1,prefix,Kakdi,Kakdi - Cucumber
+english,unbranded,0.0,1,1,prefix,English,English Toffee
+sambar,unbranded,0.0,2,2,inline,Sambar,MTR Sambar
+rai,unbranded,0.0,1,1,prefix,Rai,Rai (Mustard Seed) 100gm
+birthday,unbranded,0.0,1,1,prefix,Birthday,BIRTHDAY CAP BOY
+boy,unbranded,0.0,1,1,inline,Boy,BIRTHDAY CAP BOY
+roasted,unbranded,0.0,2,1,prefix,Roasted|Rosted,#_# Roasted Chana Dal - Murukku
+aniseed,unbranded,0.0,1,1,prefix,Aniseed,Aniseed Whole - Saunf
+flax,unbranded,0.0,1,0,prefix,Flax,Flax Seeds Plain
+jackfruit,unbranded,0.0,1,1,prefix,Jackfruit,Jackfruit Cut (kathal)
+kasoori,unbranded,0.0,1,1,prefix,Kasoori,Kasoori Methi Dry 100GM
+methi,unbranded,0.0,1,1,inline,Methi,Kasoori Methi Dry 100GM
+til,unbranded,0.0,1,1,inline,Til,SEED TIL WHITE NYLON
+chilly,unbranded,0.0,3,2,inline|prefix,Chilly,CHILLY POWDER  1KG
+insulation,unbranded,0.0,1,1,inline,Insulation,#_# Kulfi Insulation Bag - Parsi Dairy Farm
+parmesan,unbranded,0.0,1,0,prefix,Parmesan,Parmesan Cheese 1kg
+gel,unbranded,0.0,2,2,inline,Gel,Pink Gel Colour
+broken,unbranded,0.0,2,2,inline,Broken,Mogra Staff Rice (Broken Basmati Rice) 30 Kg 138777
+kaju,unbranded,0.0,2,1,inline|prefix,Kaju,Kaju 4pcs
+pav,unbranded,0.0,1,1,inline,Pav,MDH Pav Bhaji Masala 100 grams
+bhaji,unbranded,0.0,1,1,inline,Bhaji,MDH Pav Bhaji Masala 100 grams
+apricot,unbranded,0.0,1,0,prefix,Apricot,APRICOT 200 GM PACK
+refill,unbranded,0.0,1,1,inline,Refill,#_# Mop Refill [Wet]
+skin,unbranded,0.0,2,2,inline,Skin,Hungritos Permium without Skin On Fries 9Mm
+chipotle,unbranded,0.0,1,0,prefix,Chipotle,Chipotle Sauce
+smoothie,unbranded,0.0,2,2,inline,Smoothie,GK - Infinite Food - Strawberry Smoothie Premix Powder (58 G x 15 sachet)
+brookies,unbranded,0.0,1,0,inline,Brookies,Coffee and Chocolate Brookies
+seths,unbranded,0.0,2,1,inline,Seths,RTE-Seths - Chinese Ready Schezwan Sauce (Frozen) 1 Kg
+chinese,unbranded,0.0,4,3,inline|prefix,Chineese|Chinese,RTE-Seths - Chinese Ready Schezwan Sauce (Frozen) 1 Kg
+ready,unbranded,0.0,2,1,inline,Ready,RTE-Seths - Chinese Ready Schezwan Sauce (Frozen) 1 Kg
+fajita,unbranded,0.0,1,1,prefix,Fajita,Fajita Topping
+topping,unbranded,0.0,1,1,inline,Topping,Fajita Topping
+boxes,unbranded,0.0,1,1,inline,Boxes,Plastic Storage Boxes - Meduim
+pouches,unbranded,0.0,2,2,inline,Pouches,Aluminium (Silver) Pouches 6 inch * 9 inch (Pack of 100) 137302
+shikanji,unbranded,0.0,1,0,prefix,Shikanji,SHIKANJI MASALA
+litre,unbranded,0.0,1,1,inline,Litre,Nestle Water (19 Litre)
+badam,unbranded,0.0,1,1,inline,Badam,ALMOND(BADAM)
+chick,unbranded,0.0,1,1,prefix,Chick,Chick peas
+bb0009,unbranded,0.0,1,1,allcaps,BB0009,"RTE-Seths - Chinese Ready Schezwan Sauce (Frozen), 1 Kg BB0009"
+lollo,unbranded,0.0,1,1,inline,Lollo,Lettuce Lollo Rosso
+rosso,unbranded,0.0,1,1,inline,Rosso,Lettuce Lollo Rosso
+american,unbranded,0.0,1,1,prefix,American,American corn Sweet (per piece)
+shimeji,unbranded,0.0,1,1,prefix,Shimeji,Shimeji Mushrooms
+application,unbranded,0.0,1,1,inline,Application,BOOKLET - LEAVE APPLICATION
+freshener,unbranded,0.0,2,2,inline,Freshener|Freshner,Air Freshener Godrej
+barbeque,unbranded,0.0,1,1,inline,Barbeque,Sandburgs Truffle Barbeque sauce (500 gram)
+poppy,unbranded,0.0,1,0,inline,Poppy,SEED POPPY
+pork,unbranded,0.0,1,1,prefix,Pork,Pork Red Meat
+nuts,unbranded,0.0,1,1,prefix,Nuts,NUTS CASHEW 4PCS
+golgappa,unbranded,0.0,1,1,prefix,Golgappa,Golgappa Sooji
+filo,unbranded,0.0,1,1,inline,Filo,Thin Filo Dough For Sweet 450 gms
+silicon,unbranded,0.0,1,1,prefix,Silicon,Silicon Dioxide
+dioxide,unbranded,0.0,1,1,inline,Dioxide,Silicon Dioxide
+wild,unbranded,0.0,1,1,prefix,Wild,Wild Rocket Micro 100 gm
+rocket,unbranded,0.0,1,1,inline,Rocket,Wild Rocket Micro 100 gm
+micro,unbranded,0.0,1,1,inline,Micro,Wild Rocket Micro 100 gm
+sunflower,unbranded,0.0,1,0,prefix,Sunflower,Sunflower Oil
+shiitake,unbranded,0.0,2,2,inline,Shiitake|Shitake,Dried Shiitake mushroom 1kg
+improver,unbranded,0.0,1,1,inline,Improver,NONBROMITE BREAD IMPROVER 1 KG 0157
+kombu,unbranded,0.0,1,1,prefix,Kombu,Kombu Leaf Dried 1kg pkt
+rings,unbranded,0.0,1,1,inline,Rings,ONION RINGS (PB)
+ghee,unbranded,0.0,2,2,inline|prefix,Ghee,Vanaspati Ghee nature fresh
+nitrile,unbranded,0.0,1,1,prefix,Nitrile,Nitrile Hand Gloves (1box = 100 gloves)
+square,unbranded,0.0,1,1,prefix,Square,#_# Square Butter Paper - Le Four
+voucher,unbranded,0.0,1,1,inline,Voucher,A5 Voucher Leaflet
+leaflet,unbranded,0.0,1,1,inline,Leaflet,A5 Voucher Leaflet
+pgs,unbranded,0.0,1,1,inline,Pgs,Long Note Book 200 Pgs Chandras SB
+modak,unbranded,0.0,1,1,prefix,Modak,#_# Modak - Murukku
+curaco,unbranded,0.0,1,1,inline,Curaco,Monin Blue Curaco 700 ml
+printing,unbranded,0.0,1,1,inline,Printing,Carry Bag Paper 1Kg Printing
+milakai,unbranded,0.0,1,1,inline,Milakai,AACHI KULAMBU MILAKAI STAFF
+goat,unbranded,0.0,1,0,prefix,Goat,Goat Cheese
+barfi,unbranded,0.0,1,1,inline,Barfi,Sweets Milk Barfi Red Velvet
+whipping,unbranded,0.0,1,1,inline,Whipping,Rich Whipping Cream Gold
+cubes,unbranded,0.0,2,2,inline|prefix,Cube|Cubes,Maggi Cubes Chicken
+ker,unbranded,0.0,1,1,prefix,Ker,Ker Sangri
+sangri,unbranded,0.0,1,1,inline,Sangri,Ker Sangri
+brush,unbranded,0.0,2,2,inline,Brush,#_# Tar Brush (Dosa Bhatti)
+xxxl,unbranded,0.0,1,1,allcaps,XXXL,Biryani Rice(1121 XXXL)
+grinded,unbranded,0.0,1,1,inline,Grinded,Brown Onion Grinded
+trigger,unbranded,0.0,1,1,inline,Trigger,Spray Bottle with Trigger (750 ML)
+poriyal,unbranded,0.0,1,1,inline,Poriyal,Carrot Beans Poriyal(ME)-A-BAN
+lager,unbranded,0.0,1,1,inline,Lager,Corona Lager Beer 330 ml
+doi,unbranded,0.0,1,1,inline,Doi,#_# Misti Doi 100gm - Parsi Dairy Farm
+pitted,unbranded,0.0,1,1,inline,Pitted,Habit Olives Green Pitted 3Kg
+lamb,unbranded,0.0,1,1,prefix,Lamb,Lamb Rack Cap Off 1 Pkt
+rack,unbranded,0.0,1,1,inline,Rack,Lamb Rack Cap Off 1 Pkt
+off,unbranded,0.0,1,1,inline,Off,Lamb Rack Cap Off 1 Pkt
+tangy,unbranded,0.0,1,1,inline,Tangy,#_# Sticker - Sauce Dip Sticker Tangy Thai Tom Yum Sauce - Prasuma
+sprouted,unbranded,0.0,1,1,inline,Sprouted,DAILY FRESH SPROUTED PESARATTU BATTER POUCH 1/2KG
+pesarattu,unbranded,0.0,1,1,inline,Pesarattu,DAILY FRESH SPROUTED PESARATTU BATTER POUCH 1/2KG
+walnut,unbranded,0.0,3,2,prefix,Walnut,WALNUT
+vodka,unbranded,0.0,1,1,inline,Vodka,Ketel One Vodka 750 ml
+nuggets,unbranded,0.0,1,1,inline,Nuggets,Butter Chicken Nuggets
+barrier,unbranded,0.0,1,1,inline,Barrier,POUCH 200MM X 250MM - Poly Pet - With Barrier (12/70)
+cola,unbranded,0.0,1,1,inline,Cola,Coca Cola 180ML (Pack of 36PCS)
+basil,unbranded,0.0,1,0,prefix,Basil,Basil
+andhra,unbranded,0.0,1,1,inline,Andhra,Pickle Andhra
+shower,unbranded,0.0,1,1,prefix,Shower,Shower Gel 5Ltr
+refined,unbranded,0.0,1,0,prefix,Refined,Refined Oil
+platter,unbranded,0.0,1,1,inline,Platter,Pizza Platter Butter Paper 16*9
+grenadine,unbranded,0.0,1,0,inline,Grenadine,DV Grenadine Syrup 750 ml
+dragees,unbranded,0.0,1,1,inline,Dragees,#_# Chocolate Coated Salted Pistachio Dragees Jar [120 grams] - Entisi Chocolatier
+teacake,unbranded,0.0,1,1,inline,Teacake,Q-com Teacake Blister Tray
+blister,unbranded,0.0,1,1,inline,Blister,Q-com Teacake Blister Tray
+insert,unbranded,0.0,1,1,inline,Insert,Garnish Tray Plastic 9 Insert
+whipped,unbranded,0.0,1,1,inline,Whipped,N20 Whipped Cream Chargers
+chargers,unbranded,0.0,1,1,inline,Chargers,N20 Whipped Cream Chargers
+pitta,unbranded,0.0,1,0,allcaps,PITTA,WHITE PITTA BREAD (1pcs)
+light,unbranded,0.0,1,1,prefix,Light,Light Soya Sauce
+sensor,unbranded,0.0,1,1,inline,Sensor,YU001517 Sensor Magnetiv 2 Nc
+aromatic,unbranded,0.0,1,1,inline,Aromatic,ANGOSTURA Aromatic bitters (200ML)
+purple,unbranded,0.0,1,1,prefix,Purple,Purple Cabbage
+safed,unbranded,0.0,1,1,prefix,Safed,Safed mirchi
+drink,unbranded,0.0,1,1,inline,Drink,Canteen Drink Box (250GSM) SBS
+nimbu,unbranded,0.0,1,1,prefix,Nimbu,Nimbu (Lemon)
+cardamom,unbranded,0.0,1,0,inline,Cardamom,Black Cardamom 250gm
+elaichi,unbranded,0.0,1,1,inline,Elaichi,MOTI ELAICHI
+wide,unbranded,0.0,1,1,allcaps,WIDE,Bagasse Burger BOX  WIDE BASE
+tooth,unbranded,0.0,1,1,inline,Tooth,Kimirica White Gold Tooth Brush pack
+sipper,unbranded,0.0,1,0,prefix,Sipper,Sipper Cup 300ml
+mackeral,unbranded,0.0,1,0,prefix,Mackeral,Mackeral 6/8
+kebab,unbranded,0.0,1,1,inline,Kebab,Paper Printed Kebab Box 6 Compartment
+compartment,unbranded,0.0,1,1,inline,Compartment,Paper Printed Kebab Box 6 Compartment
+ajwain,unbranded,0.0,1,0,prefix,Ajwain,Ajwain Whole
+danish,unbranded,0.0,1,1,prefix,Danish,Danish White Feta 500GM
+feta,unbranded,0.0,1,1,inline,Feta,Danish White Feta 500GM
+pound,unbranded,0.0,1,1,inline,Pound,#_# Eggless Chocolate Chip Pound Cake - Sweetish
+yam,unbranded,0.0,1,1,inline,Yam,Elephant Yam
+broccoli,unbranded,0.0,1,0,prefix,Broccoli,Broccoli  incremental 0.5 10301
+foil,unbranded,0.0,1,1,inline,Foil,Kesar Kaju Katli 500 Gms Gold Foil Cover
+mozzarella,unbranded,0.0,1,1,prefix,Mozzarella,Mozzarella Cheese - Flanders
+bulgogi,unbranded,0.0,1,0,prefix,Bulgogi,Bulgogi Sauce
+blow,unbranded,0.0,1,1,inline,Blow,TORCH BLOW COOKING
+italian,unbranded,0.0,1,1,prefix,Italian,Italian Focassia Polly Bag 8 x 10 Inch
+focassia,unbranded,0.0,1,1,inline,Focassia,Italian Focassia Polly Bag 8 x 10 Inch
+seafood,unbranded,0.0,1,1,prefix,Seafood,Seafood-Basa

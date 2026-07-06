@@ -1,0 +1,11 @@
+title,brand,pred_brand,confidence,p_branded,raw_conf,logprob,verifier_token,stage1_reasoning,error
+HARPIC,UNBRANDED,branded,0.9954,,0.9954,-0.00462,Yes,Harpic is a well-known branded toilet cleaning product by Reckitt Benckiser.,
+BANARASI LAL PEDA-200 Gms,Ksheer Sagar,branded,0.6225,,0.6225,-0.474078,Yes,BANARASI LAL is a specific brand name under which the Peda sweet is sold.,
+"Sakthi - Kulambu Chilli powder, 500gm",Unbranded,branded,1.0,,1.0,-2.2e-05,Yes,"Sakthi is a well-known spice brand, and this product is sold under that specific brand name.",
+EASTMADE - CUMIN (JEERA) 1 KG,unbranded,branded,0.9999,,0.9999,-7.1e-05,Yes,EASTMADE is a specific brand name under which this cumin/jeera product is sold.,
+Chicken Curry Cut,Unbranded,unbranded,0.9979,,0.9979,-0.002151,Yes,Chicken Curry Cut is a generic cut of meat with no specific brand name associated with it.,
+SABUDANA NYLON,SHRI VARALAKSHMI,unbranded,0.9988,,0.9988,-0.001207,Yes,"Sabudana Nylon refers to a type of tapioca pearl (a commodity item) with 'Nylon' indicating the variety/texture, not a brand name.",
+Tawa Roti (7 inch),Zomato HyperPure,unbranded,0.9979,,0.9979,-0.002118,Yes,Tawa Roti is a generic flatbread product with no specific brand name associated with it.,
+Kashmiri Mirch Powder,Unbranded,unbranded,0.9971,,0.9971,-0.002939,Yes,Kashmiri Mirch Powder is a generic spice product with no specific brand name mentioned.,
+Chana Black,Unbrand,unbranded,0.9965,,0.9965,-0.00349,Yes,Chana Black is a generic commodity item with no specific brand name associated with it.,
+ROW - Barcode Lable 50mmX25mm Non Tearable,Unbranded,branded,0.5,,0.5,-0.693148,No,ROW is a specific brand name selling barcode labels as a branded product.,

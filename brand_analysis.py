@@ -15,6 +15,7 @@ import datetime
 import math
 
 HIGH, LOW = 0.85, 0.70
+GREY = 0.85   # confidence <= GREY -> "grey zone", route to human review
 
 
 def to_float(v):
@@ -112,6 +113,12 @@ def render(rows, scored_path):
         grp = [r for r in graded if lo <= r["conf"] < hi]
         acc = (sum(r["correct"] for r in grp) / len(grp)) if grp else None
         out(f"| {label} | {len(grp)} | {fmt(acc, 3) if acc is not None else '—'} |")
+    out("")
+
+    grey = [r for r in recs if r["conf"] <= GREY]
+    out(f"**Grey zone (confidence ≤ {GREY:.2f} → route to review): "
+        f"{len(grey)} / {len(recs)} rows ({len(grey)/len(recs):.0%}).** "
+        f"Everything above is auto-accept.")
     out("")
 
     wrong = [r for r in graded if not r["correct"]]

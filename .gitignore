@@ -4,3 +4,6 @@ __pycache__/
 sc_run.log
 *.log
 w1.pdf
+*.log
+*_cache.csv
+__pycache__/
