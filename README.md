@@ -15,7 +15,7 @@ Phase 1:
   title ──► ENGINE 1  claude-sonnet-4-6
             rich classification {Branding, Brandname, Reasoning} (fact-dense,
             must self-declare "morphology-based inference" / "unrecognized token")
-        ──► ENGINE 2  gpt-4o-mini, logprobs=True
+        ──► ENGINE 2  gpt-4o, logprobs=True
             adversarial auditor, forced single token A/D
             confidence = renormalized P(A) over {A, D} token mass
         ──► accept iff verdict A AND p_agree >= 0.85, else grey
@@ -76,4 +76,6 @@ reasoning_s2, p_agree_s1, p_agree_s2, flags
 | `pipeline/run_phase1.py` | classify + verify → `phase1_results.csv` |
 | `pipeline/run_phase2.py` | grey-zone escalation → `final_predictions.csv`, `review_queue.csv` |
 | `tests/` | acceptance tests incl. mock end-to-end smoke |
-| `*_raw.jsonl` | every raw API response, for audit |
+| `phase1_results.csv` | current phase-1 run: Sonnet labels + gpt-4o logprob confidence |
+| `opus_phase1_results.csv` | same + independent Opus label column (`OPUS(BRAND/NO BRAND)`) |
+| `*_raw.jsonl` | every raw API response, for audit (not committed) |

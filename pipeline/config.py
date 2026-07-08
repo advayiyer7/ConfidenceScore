@@ -9,7 +9,7 @@ MORPH = "morphology-based inference"
 @dataclass
 class Config:
     e1_model: str = "claude-sonnet-4-6"
-    e2_model: str = "gpt-4o-mini"
+    e2_model: str = "gpt-4o"
     e3_model: str = "gpt-5"
     grey: float = GREY
     tpm: int = 30000

@@ -7,3 +7,4 @@ w1.pdf
 *.log
 *_cache.csv
 __pycache__/
+*_raw.jsonl
