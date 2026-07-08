@@ -54,12 +54,60 @@ REASONING: {reasoning}
 
 One letter, A or D:"""
 
-E3_APPENDIX = """A previous classifier answered as follows and an auditor was not convinced:
-PREVIOUS: {prev}
-AUDITOR CONCERN: {concern}
-Re-derive the answer from scratch. You may confirm or overturn the previous
-label, but your reasoning must stand on its own facts — do not cite the
-previous answer as evidence."""
+WEB_SYSTEM = """You research whether a name from an Indian B2B grocery/food-service catalog is a
+real brand, company, or seller. Use web search. Report concretely what you
+find: the owning company, product lines, store/marketplace listings,
+trademark/registration, city/region — with source names. Report every company
+you find carrying the name; do NOT judge whether it matches this particular
+product — that is a downstream job, and sellers in this catalog often tag
+items far outside their known product focus. Never conclude "no evidence"
+when you did find a company with the name: report the company. Only say the
+search found nothing when there is genuinely no such company at all.
+3-6 sentences, facts only."""
+
+WEB_USER = """Product title: {title}
+Candidate brand/seller name: {name}
+{context}
+What does the web say about this name as a brand/company/seller? Sellers in
+this catalog are often small Indian outlets, cloud kitchens, bakeries, or D2C
+labels whose name tags MANY unrelated items (their whole catalog, including
+packaging). So if you find a real company with this name in India, that
+corroborates it even if its main products differ from this one item. If the
+candidate looks wrong, also check the other distinctive tokens in the title —
+especially a trailing "- Name" segment, which is usually the seller's name."""
+
+E2_WEB_SYSTEM = """You make the FINAL call on a product classification, weighing ALL the evidence
+given: the product TITLE, a prior classifier's LABEL/BRANDNAME/REASONING,
+CATALOG CONTEXT (how the candidate name recurs across this catalog), and WEB
+RESEARCH (findings from a live internet search we ran on the candidate name
+just now — independent external evidence, more current than your training
+data).
+
+Weigh evidence by class:
+- Strong: web findings naming a real company — owner, trademark, website,
+  store/marketplace listings — whose name matches a distinctive token in the
+  title; the same name recurring across many UNRELATED items in this catalog
+  (outlets, cloud kitchens, and D2C sellers tag their whole menu and even
+  packaging with their name).
+- Weak: the prior classifier's unsupported assertions; your own inability to
+  recall the name (obscure real sellers are common here); a web-found company
+  whose known products differ from this one item — that does NOT disqualify
+  it when the catalog shows the name recurring as a seller tag.
+- Against: web search finding no such company at all; a fitting generic or
+  vernacular reading of the token; findings that contradict the claimed brand.
+
+Decide whether the LABEL is correct. Answer with exactly one letter:
+A = the label is correct on this evidence
+D = the label is wrong, or the evidence cannot support it"""
+
+E2_USER_WEB = """TITLE: {title}
+LABEL: {label}
+BRANDNAME: {name}
+REASONING: {reasoning}
+{context}
+WEB RESEARCH (live search results): {findings}
+
+One letter, A or D:"""
 
 RETRY_JSON = "\n\nReturn ONLY the JSON object."
 TERMINAL_PAT = ("insufficient_quota", "exceeded your current quota",
@@ -243,6 +291,32 @@ def mock_classify(title: str, stage: int) -> Cls:
                "FACT: descriptive commodity words only; no maker token present.")
 
 
+MOCK_WEB = {
+    "chonker": "Found: Chonkers is an Indian D2C cookie brand (site and "
+               "Instagram store listings, Mumbai).",
+    "murukku": "Found: Murukku is a Chennai-based snacks seller listed on "
+               "Swiggy and marketplaces.",
+    "red label": "Found: Red Label is a Brooke Bond tea brand owned by "
+                 "Hindustan Unilever.",
+}
+
+
+def mock_research(title: str, name: str) -> str:
+    t = f"{title} {name}".lower()
+    for k, v in MOCK_WEB.items():
+        if k in t:
+            return v
+    return f"Search found no evidence of {name!r} as a brand or company."
+
+
+def mock_verify_web(cls: Cls, findings: str) -> tuple[float, str, bool]:
+    if findings.startswith("Found:"):
+        p = 0.95 if cls.branding == "Branded" else 0.05
+    else:
+        p = 0.55                     # unverifiable stays mid, never zero
+    return p, ("A" if p > 0.5 else "D"), False
+
+
 def mock_verify(title: str, cls: Cls) -> tuple[float, str, bool]:
     r = cls.reasoning
     if "morphology-based inference" in r:
@@ -293,27 +367,68 @@ class Engines:
                 continue
         return None
 
-    def classify3(self, title: str, prev_json: str, concern: str) -> Cls | None:
+    def research(self, title: str, name: str, context: str = "") -> str:
+        """Live web search on the candidate name; returns findings text."""
         if self.cfg.mock:
-            cls = mock_classify(title, 2)
-            self.raw.write("e3-mock", title, cls.to_json())
-            return cls
-        base = f"{title}\n\n" + E3_APPENDIX.format(prev=prev_json, concern=concern)
-        for extra in ("", RETRY_JSON):
-            user = base + extra
-            self.tpm.take(est(E1_SYSTEM, user, out=2000))
-            # reasoning models: no temperature, no logprobs, max_completion_tokens
-            resp = call_with_retry(lambda u=user: self.oc.chat.completions.create(
-                model=self.cfg.e3_model,
-                messages=[{"role": "system", "content": E1_SYSTEM},
-                          {"role": "user", "content": u}],
-                max_completion_tokens=2000))
-            self.raw.write("e3", title, dump(resp))
+            text = mock_research(title, name)
+            self.raw.write("websearch-mock", title, text)
+            return text
+        q = WEB_USER.format(title=title, name=name, context=context)
+        prompt = WEB_SYSTEM + "\n\n" + q
+        # OpenAI has shipped web search under several API shapes; try newest first
+        attempts = [
+            lambda: self.oc.responses.create(
+                model=self.cfg.search_model, tools=[{"type": "web_search"}],
+                input=prompt).output_text,
+            lambda: self.oc.responses.create(
+                model=self.cfg.search_model,
+                tools=[{"type": "web_search_preview"}],
+                input=prompt).output_text,
+            lambda: self.oc.chat.completions.create(
+                model="gpt-4o-search-preview", web_search_options={},
+                messages=[{"role": "system", "content": WEB_SYSTEM},
+                          {"role": "user", "content": q}],
+            ).choices[0].message.content,
+        ]
+        last: Exception | None = None
+        for fn in attempts:
             try:
-                return parse_cls(resp.choices[0].message.content or "")
-            except ParseError:
-                continue
-        return None
+                self.tpm.take(est(prompt, out=400))
+                text = call_with_retry(fn)
+                if text and text.strip():
+                    self.raw.write("websearch", title, text)
+                    return text.strip()
+            except Terminal:
+                raise
+            except Exception as exc:                      # noqa: BLE001
+                last = exc
+        raise RuntimeError(f"web research failed on all API shapes: {last}")
+
+    def verify_web(self, title: str, cls: Cls, findings: str,
+                   context: str = "") -> tuple[float, str, bool]:
+        """Same forced-token logprob verdict, with web findings as evidence."""
+        if self.cfg.mock:
+            p, v, anom = mock_verify_web(cls, findings)
+            self.raw.write("e2web-mock", title, {"p_agree": p, "verdict": v})
+            return p, v, anom
+        system = E2_WEB_SYSTEM
+        user = E2_USER_WEB.format(title=title, label=cls.branding,
+                                  name=cls.brandname, reasoning=cls.reasoning,
+                                  findings=findings, context=context)
+        ps, anomaly = [], False
+        for _ in range(max(1, self.cfg.k)):
+            self.tpm.take(est(system, user, out=1))
+            resp = call_with_retry(lambda: self.oc.chat.completions.create(
+                model=self.cfg.e2_model,
+                messages=[{"role": "system", "content": system},
+                          {"role": "user", "content": user}],
+                temperature=0, max_tokens=1, logprobs=True, top_logprobs=10))
+            self.raw.write("e2web", title, dump(resp))
+            p, anom = extract_p_agree(resp)
+            ps.append(p)
+            anomaly = anomaly or anom
+        p = statistics.median(ps)
+        return p, ("A" if p > 0.5 else "D"), anomaly
 
     def verify(self, title: str, cls: Cls) -> tuple[float, str, bool]:
         if self.cfg.mock:
