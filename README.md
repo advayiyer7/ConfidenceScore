@@ -1,43 +1,65 @@
 # ConfidenceScore
 
-Logprob-based confidence scoring for unit-of-measure (UoM) standardization of
-grocery/food product rows, using the OpenAI API.
+Branded/Unbranded classification for noisy Indian B2B catalog titles, with
+**measured confidence** from token logprobs — never self-reported. Governing
+policy: low-confidence-wrong routes to review; **high-confidence-wrong must
+not ship**.
 
-Given the output CSV of a 3-tier UoM pipeline (target unit already chosen in
-`uom_std_unit`), the script fills in the standardized quantity and attaches a
-confidence in [0,1] derived from **token logprobs** — not a self-reported
-number — plus top-K alternative interpretations when confidence is low.
+Full method write-up: **[summary.md](summary.md)**. Every prior approach and
+the standing negative results: **[past.md](past.md)**.
 
-## How it works
+## Architecture
 
-1. **Deterministic fast path** (no API call): explicit measurements in the
-   title/inferred fields (`5L`, `60 ml`, `30 G x 30 sachet` → 0.9 kg) are
-   parsed directly → confidence 1.0.
-2. **Two-stage logprob estimation** for everything else:
-   - **Stage 1 (estimate):** the model returns 2–4 candidate interpretations
-     `{std_unit, std_qty, reasoning}` as JSON. For "piece" items it estimates
-     the typical weight of one piece in kg (e.g. one samosa ≈ 0.05 kg).
-   - **Stage 2 (select, 1 token):** candidates are labelled A/B/C/… and the
-     model answers with a single letter, called with `logprobs=True`. The
-     top-logprob mass on the candidate letters is exponentiated, renormalized,
-     and the chosen letter's probability becomes the confidence. Below the
-     threshold, the top-K candidates ship as `alternatives`.
-
-Confidence is currently **raw, uncalibrated** logprob mass — see the
-`calibrate()` stub for where isotonic/Platt scaling will plug in.
-
-## Usage
-
-```bash
-pip install openai
-export OPENAI_API_KEY=sk-...   # PowerShell: $env:OPENAI_API_KEY = "sk-..."
-
-python uom_confidence.py --input pipeline_out.csv --output scored.csv \
-    [--model gpt-4o] [--threshold 0.70] [--k 2] [--workers 4] [--no-piece-to-kg]
+```
+title ─► claude-sonnet-4-6      minimal goal-phrased prompt
+              {Branding, Brandname, Reasoning}
+      ─► gpt-4o DIGIT SCORER    0-9 rubric, digit forced as FIRST token;
+              confidence = probability-weighted expected digit / 9
+      ─► route by confidence:
+              >= 0.85      auto-accept
+              0.70 - 0.85  phase 2: web search on the candidate name
+                           (+ catalog sibling context) → logprob re-verdict
+              <  0.70      human review
 ```
 
-Output keeps all original columns and appends `computed_std_qty`,
-`confidence`, `confidence_source` (`deterministic` | `logprob` | `none`),
-`alternatives` (JSON), and `model_reasoning`.
+Key design rules (each backed by a measured negative result — see past.md):
+one-token-first verdicts only (reasoning-before-verdict measures
+self-persuasion); no deference instructions; "plausible" is not an acceptance
+criterion; binary A/D output saturates — the 0-9 scale is what gives the
+middle band.
 
-`sample_input.csv` / `sample_output.csv` show an example run.
+## Run
+
+```bash
+pip install openai anthropic python-dotenv pytest
+# .env: ANTHROPIC_API_KEY=...  OPENAI_API_KEY=...
+
+python -m pipeline.run_phase1     # Sonnet classify + binary verifier (legacy verifier)
+python -m pipeline.run_scorer     # 0-9 digit scorer -> finalconfident.csv
+python -m pipeline.run_phase2     # web-search grounding for the middle band
+python -m pytest tests/           # offline acceptance tests (mocked engines)
+```
+
+All runners flush per row and support `--resume`; terminal API errors
+(quota/auth) abort loudly — a failed row is never defaulted to a label.
+
+## Results (1,000-row catalog, independent Opus labels as the check)
+
+| band | rows | outcome |
+|---|---|---|
+| auto-accept (>= 0.85) | 717 | 8 Opus-disagrees, all borderline 0.85-0.90 |
+| phase-2 web search (0.70-0.85) | 268 | 211 accepted / 57 review |
+| human review (< 0.70) | 15 | genuinely dubious |
+| **total** | **928 accepted / 72 review** | 10 known-wrong accepts; 0 at the 0.90 line |
+
+## Files
+
+| file | purpose |
+|---|---|
+| `distinct_products_po_1000.csv` | input catalog |
+| `opus_phase1_results.csv` | Sonnet outputs + binary verifier conf + Opus labels |
+| `finalconfident.csv` | **deliverable** — digit-scorer confidence + band per title |
+| `phase2_results_070_085.csv` | phase-2 outcomes for the middle band |
+| `pipeline/` | engines (prompts, logprob extraction, throttle, mocks) + runners |
+| `summary.md` / `past.md` | current method / project history |
+| `advaynextclaude.md` | deep-dive on the June entity-first architecture |

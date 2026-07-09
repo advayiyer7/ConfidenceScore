@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 .env
+sc_run.log
+*.log
+w1.pdf
+*.log
+*_cache.csv
+__pycache__/
+*_raw.jsonl
